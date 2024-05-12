@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@300;400&family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Comfortaa:wght@300..700&family=Montserrat:wght@300;400&family=Onest:wght@100..900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Comfortaa", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #31333b;
+  color: #f9f9f9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: "Besley", serif; 
+  font-size: xx-large;
 }
+
+button {
+  font-family: "Comfortaa", sans-serif;
+  width: auto;
+  box-shadow: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;  
+}
+

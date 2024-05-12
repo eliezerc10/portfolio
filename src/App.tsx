@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { About } from './components/about/About';
+import { Navbar } from './components/navbar/Navbar';
 function App() {
+
+  const links = [
+    { text: 'About', url: '/about' },
+    { text: 'Experience', url: '/experience' },
+    { text: 'Skills', url: '/skills' },
+    { text: 'Contact', url: '/contact' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar links={links} />
+      <About />
+    </>
   );
 }
 

@@ -1,0 +1,18 @@
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0%;
+    background-color: #34353a;
+    gap: 5%;
+    a {
+        color: #a5a6a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #f9f9f9;
+        text-decoration: underline;
+    }
+    a:active {
+        color: #f9f9f9;
+    }
+}
