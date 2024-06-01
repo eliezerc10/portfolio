@@ -1,5 +1,7 @@
 import { Element } from 'react-scroll'
 import personalPic from '../../assets/images/profilePic.png'
+import linkedinLogo from '../../assets/images/linkedin-logo.png'
+import gmailLogo from '../../assets/images/gmail-logo.png'
 import '../about/about.css'
 interface AboutProps {
     
@@ -15,7 +17,20 @@ export const About: React.FC<AboutProps> = ({}) => {
                     </p>
                     <button className='btn'>Contact me</button>
                 </div>
-                <img className="about-img" src={personalPic} alt="foto de perfil" />
+                <img className="about-img" src={personalPic} alt="profile pic" /> 
+                <div className='social-media-line'>
+                    <div className='vertical-line'></div>
+                    <article>
+                        <button onClick={() => window.open('https://www.linkedin.com/in/eliezer-castillo-colmenarez')}>
+                            <img src={linkedinLogo} alt="linkedIn" />
+                        </button>
+                    </article>
+                    <article>
+                        <button onClick={() => window.open('mailto:email@example.com?subject=Subject&body=Body%20goes%20here')}>
+                            <img src={gmailLogo} alt="gmail" />
+                        </button>
+                    </article>
+                </div>
             </section>
             <Element name='about'>
                 <section  className='about-of-sec'>
@@ -34,8 +49,7 @@ export const About: React.FC<AboutProps> = ({}) => {
                     </div>
                 </section>
             </Element>
-            
-            </>
+        </>
         
     )
 }

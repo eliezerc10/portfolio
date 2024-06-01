@@ -3,7 +3,7 @@ import { Element } from "react-scroll"
 
 interface ExperienceProps {
     experiences : {
-        year: number,
+        period: string,
         company: string,
         role: string,
         techStack: string[]
@@ -19,16 +19,13 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                 <div className='experiences-div'>
                     { experiences.map((experience: any) =>
                         <article className='experience-article' key={experience.index}>
-                            <div className="pointer">
-                                <span>{experience.year}</span>
-                            </div>
                             <div>
                                 <div className="circle"></div>
                                 <div className="vertical-line"></div>
                             </div>
                             <div>
-                                <h3 className='role-title'>{ experience.role }</h3>
-                                <h4 className='company-title'>{ experience.company }</h4>
+                                <h3 className='role-title'><strong>{ experience.role }</strong> <br /> <span>({experience.period})</span></h3>
+                                <h5 className='company-title'>{ experience.company }</h5>
                                 <ul>
                                     {experience.achievements.map((achievement:any) => (
                                     <li key={achievement}>{achievement}</li>

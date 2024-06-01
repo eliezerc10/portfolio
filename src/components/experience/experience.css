@@ -24,10 +24,17 @@
         margin-block-start: auto;
         padding-inline-start: 30px;
         margin-bottom: 0px;
+        line-height: 25px;
+        li {
+            margin-bottom: 10px;
+        }
     }
 }
 .role-title, .company-title {
     margin: 8px 0px;
+    span {
+        color: #f0bf6c;
+    }
 }
 
 .pointer {
@@ -55,19 +62,3 @@
     border-bottom: 20px solid transparent;
 }
 
-.circle {
-    width: 30px;
-    height: 30px;
-    background: #f0bf6c;
-    border-radius: 50%;
-    margin: 4px 0px;
-    box-shadow: 0px 0px 10px 0px #f0bf6c;
-}
-
-.vertical-line {
-    border: 2px solid white;
-    border-radius: 1px;
-    height: 100%;
-    width: 0px;
-    margin: 10px auto;  
-}
