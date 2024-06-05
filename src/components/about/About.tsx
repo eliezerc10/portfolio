@@ -1,12 +1,14 @@
 import { Element } from 'react-scroll'
 import personalPic from '../../assets/images/profilePic.png'
-import linkedinLogo from '../../assets/images/linkedin-logo.png'
-import gmailLogo from '../../assets/images/gmail-logo.png'
 import '../about/about.css'
 interface AboutProps {
-    
+    aboutLinks: {
+        image:string,
+        url: string,
+        alt:string
+    }[]
 }
-export const About: React.FC<AboutProps> = ({}) => {
+export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
     return(
         <>
             <section  className="about-sec">
@@ -20,16 +22,15 @@ export const About: React.FC<AboutProps> = ({}) => {
                 <img className="about-img" src={personalPic} alt="profile pic" /> 
                 <div className='social-media-line'>
                     <div className='vertical-line'></div>
-                    <article>
-                        <button onClick={() => window.open('https://www.linkedin.com/in/eliezer-castillo-colmenarez')}>
-                            <img src={linkedinLogo} alt="linkedIn" />
-                        </button>
-                    </article>
-                    <article>
-                        <button onClick={() => window.open('mailto:email@example.com?subject=Subject&body=Body%20goes%20here')}>
-                            <img src={gmailLogo} alt="gmail" />
-                        </button>
-                    </article>
+                    { aboutLinks.map((link: any) => 
+                            <article>
+                                <a href={(link.url)} target='_blank'>
+                                    <img src={link.image} alt={link.alt} />
+                                </a>
+                            </article>
+                        )
+                    }
+                    
                 </div>
             </section>
             <Element name='about'>

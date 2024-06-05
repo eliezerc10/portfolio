@@ -10,6 +10,8 @@ import ReactLogo from './assets/images/React-logo.png'
 import SpringLogo from './assets/images/Spring-logo.png'
 import BootstrapLogo from './assets/images/Bootstrap-logo.png'
 import PlsqlLogo from './assets/images/Plsql-logo.png'
+import linkedinLogo from './assets/images/linkedin-logo.png'
+import gmailLogo from './assets/images/gmail-logo.png'
 import { Experience } from './components/experience/Experience';
 
 function App() {
@@ -20,6 +22,19 @@ function App() {
     /* { text: 'Skills', url: 'skills' }, */
     { text: 'Contact', url: 'contact' },
   ];
+
+  const aboutLinks = [
+    {
+      image: linkedinLogo,
+      url: 'https://www.linkedin.com/in/eliezer-castillo-colmenarez',
+      alt: 'linkedin'
+    },
+    {
+      image: gmailLogo,
+      url: 'mailto:eliezercastillo6@gmail.com?subject=Full-stack Web Developer',
+      alt: 'gmai'
+    }
+  ]
 
   const skills = [
     { img: JavascriptLogo, name: 'Javascript' },
@@ -66,7 +81,7 @@ function App() {
         <Navbar links={links} />
       </header>
       <main>
-        <About />
+        <About aboutLinks={aboutLinks}/>
         <Skills skills  ={skills} />
         <Experience experiences={experiences} />
       </main> 
