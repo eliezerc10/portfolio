@@ -16,8 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             setScroll(window.scrollY < 50);
         });
     }, []);
-    
-    
+
     return(
         <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'}>
             {links.map((link: any) =>

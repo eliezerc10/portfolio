@@ -1,6 +1,7 @@
 .experience-container {
     background-color: #3d3e42;
     padding-bottom: 0.5%;
+    user-select: none;
     .exp-section {
         position: relative;
         margin: 8% 5% 5% 5%;

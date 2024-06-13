@@ -1,4 +1,4 @@
-import { Element } from 'react-scroll'
+import { Element, scroller } from 'react-scroll'
 import personalPic from '../../assets/images/profilePic.png'
 import '../about/about.css'
 interface AboutProps {
@@ -9,6 +9,15 @@ interface AboutProps {
     }[]
 }
 export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
+    
+    const scrollToContacts = () => {
+        scroller.scrollTo('contact-sect', {
+            duration: 500,
+            offset:70,
+            smooth: true
+        })
+    }
+    
     return(
         <>
             <section  className="about-sec">
@@ -17,7 +26,7 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
                         <br></br>
                         FULL-STACK WEB DEVELOPER
                     </p>
-                    <button className='btn'>Contact me</button>
+                    <button className='btn' onClick={scrollToContacts}>Contact me</button>
                 </div>
                 
                 <img className="about-img" src={personalPic} alt="profile pic" /> 

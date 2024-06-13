@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: #34353a;
     box-shadow: 0px 18px 20px 0px #0000004d;
+    user-select:none
 }
 
 .about-of-sec {
@@ -15,6 +16,7 @@
 .about-description {
     display: flex;
     line-height: 25px;
+    user-select: none;
     strong {
         color: #ffc86b;
     }
