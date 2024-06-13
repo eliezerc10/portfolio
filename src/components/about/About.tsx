@@ -19,12 +19,14 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
                     </p>
                     <button className='btn'>Contact me</button>
                 </div>
+                
                 <img className="about-img" src={personalPic} alt="profile pic" /> 
+                
                 <div className='social-media-line'>
                     <div className='vertical-line'></div>
-                    { aboutLinks.map((link: any) => 
-                            <article>
-                                <a href={(link.url)} target='_blank'>
+                    { aboutLinks.map((link: any, i) => 
+                            <article key={i}>
+                                <a href={(link.url)} target='_blank' rel="noreferrer">
                                     <img src={link.image} alt={link.alt} />
                                 </a>
                             </article>

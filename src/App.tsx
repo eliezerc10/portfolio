@@ -12,7 +12,9 @@ import BootstrapLogo from './assets/images/Bootstrap-logo.png'
 import PlsqlLogo from './assets/images/Plsql-logo.png'
 import linkedinLogo from './assets/images/linkedin-logo.png'
 import gmailLogo from './assets/images/gmail-logo.png'
+import whatsappLogo from './assets/images/whatsapp-logo.png'
 import { Experience } from './components/experience/Experience';
+import { Contact } from './components/contact/Contact';
 
 function App() {
 
@@ -20,9 +22,14 @@ function App() {
     { text: 'About', url: 'about' },
     { text: 'Experience', url: 'experience' },
     /* { text: 'Skills', url: 'skills' }, */
-    { text: 'Contact', url: 'contact' },
+    { text: 'Contact', url: 'contact-sect' },
   ];
-
+  
+  const contactData = [
+    { icon: 'call', content: '+58 412-9922602'},
+    { icon: 'email', content: 'eliezercastillo6@gmail.com'},
+    { icon: 'location_on', content: 'Caracas, Venezuela'}
+  ]
   const aboutLinks = [
     {
       image: linkedinLogo,
@@ -32,7 +39,12 @@ function App() {
     {
       image: gmailLogo,
       url: 'mailto:eliezercastillo6@gmail.com?subject=Full-stack Web Developer',
-      alt: 'gmai'
+      alt: 'gmail'
+    },
+    {
+      image: whatsappLogo,
+      url: 'https://api.whatsapp.com/send?phone=584129922602',
+      alt: 'whatsapp'
     }
   ]
 
@@ -82,8 +94,9 @@ function App() {
       </header>
       <main>
         <About aboutLinks={aboutLinks}/>
-        <Skills skills  ={skills} />
+        <Skills skills={skills} />
         <Experience experiences={experiences} />
+        <Contact contactData={contactData} aboutLinks={aboutLinks}/>
       </main> 
       
     </>
