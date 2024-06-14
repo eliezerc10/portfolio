@@ -1,10 +1,12 @@
+
 import '../contact/contact.css'
 import { Element } from "react-scroll"
 
 interface ContactProps {
     contactData: {
         icon: string,
-        content: string 
+        content: string,
+        url: string 
     }[],
     aboutLinks: {
         image:string,
@@ -23,7 +25,15 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
                     {contactData.map((element:any, i) =>
                         <article key={i} className='contact-article'>
                             <span className="material-icons">{element.icon}</span>
-                            <span className='contact-content'>{element.content}</span>  
+                            {element.url !== '' ? 
+                            
+                                <a href={element.url}>
+                                    <span className='contact-content'>{element.content}</span>  
+                                </a> 
+                                :
+                                <span className='contact-content'>{element.content}</span>  
+                            }
+                            
                         </article>
                     )}
                 </div>

@@ -81,4 +81,8 @@
         line-height: 24px;
         color: #ffc86b;
     }
+
+    a {
+        text-decoration-color: #ffc86b;
+    }
 }
