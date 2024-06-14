@@ -21,3 +21,10 @@
         width: 45%;
     }
 }
+
+@media (min-width:1200px) {
+    .skills-container{
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    
+    }
+}
