@@ -1,0 +1,10 @@
+.regards-section {
+    display: flex;
+    margin: 0% 5%;
+    height: 30vh;
+    text-align: center;
+
+    h2 {
+        margin: auto;
+    }
+}

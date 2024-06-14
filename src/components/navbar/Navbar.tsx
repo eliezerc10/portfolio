@@ -4,7 +4,8 @@ import '../navbar/navbar.css'
 interface NavbarProps {
     links: {
         text: string
-        url: string
+        url: string,
+        offset: number
     }[]
 }
 
@@ -24,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
                 activeClass="active" 
                 spy={true} 
                 smooth={true} 
-                offset={-70} 
+                offset={link.offset} 
                 duration={500}
                 isDynamic={true}
                 key={link.url}  to={link.url}>{link.text}</Link>

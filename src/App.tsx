@@ -15,14 +15,15 @@ import gmailLogo from './assets/images/gmail-logo.png'
 import whatsappLogo from './assets/images/whatsapp-logo.png'
 import { Experience } from './components/experience/Experience';
 import { Contact } from './components/contact/Contact';
+import { Regards } from './components/regards/Regards';
 
 function App() {
 
   const links = [
-    { text: 'About', url: 'about' },
-    { text: 'Experience', url: 'experience' },
+    { text: 'About', url: 'about', offset: -70 },
+    { text: 'Experience', url: 'experience', offset: -90 },
     /* { text: 'Skills', url: 'skills' }, */
-    { text: 'Contact', url: 'contact-sect' },
+    { text: 'Contact', url: 'contact-sect', offset: 90 },
   ];
   
   const contactData = [
@@ -97,6 +98,7 @@ function App() {
         <Skills skills={skills} />
         <Experience experiences={experiences} />
         <Contact contactData={contactData} aboutLinks={aboutLinks}/>
+        <Regards message='Your time is valuable, thank you for sharing it!'/>
       </main> 
       
     </>

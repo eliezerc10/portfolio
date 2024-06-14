@@ -13,7 +13,7 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
     const scrollToContacts = () => {
         scroller.scrollTo('contact-sect', {
             duration: 500,
-            offset:70,
+            offset:90,
             smooth: true
         })
     }
