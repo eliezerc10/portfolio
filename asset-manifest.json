@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.33d80ed3.css",
+    "main.js": "/portfolio/static/js/main.a0da997b.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/profilePic.png": "/portfolio/static/media/profilePic.1af95935ee87f903bad0.png",
+    "static/media/whatsapp-logo.png": "/portfolio/static/media/whatsapp-logo.807cf0d84060a9ee2059.png",
+    "static/media/material-icons-two-tone.woff": "/portfolio/static/media/material-icons-two-tone.3baa5b8f3469222b822d.woff",
+    "static/media/React-logo.png": "/portfolio/static/media/React-logo.2f2532db663fd5ec5f95.png",
+    "static/media/Typescript-logo.png": "/portfolio/static/media/Typescript-logo.d362ac9034fd59687ef3.png",
+    "static/media/material-icons-two-tone.woff2": "/portfolio/static/media/material-icons-two-tone.4ef4218c522f1eb6b5b1.woff2",
+    "static/media/material-icons-round.woff": "/portfolio/static/media/material-icons-round.5d681e2edae8c60630db.woff",
+    "static/media/material-icons-outlined.woff": "/portfolio/static/media/material-icons-outlined.f882956fd323fd322f31.woff",
+    "static/media/material-icons-round.woff2": "/portfolio/static/media/material-icons-round.c380809fd3677d7d6903.woff2",
+    "static/media/material-icons.woff": "/portfolio/static/media/material-icons.4d73cb90e394b34b7670.woff",
+    "static/media/Spring-logo.png": "/portfolio/static/media/Spring-logo.1a753d3a09a8df3cec6c.png",
+    "static/media/material-icons-sharp.woff": "/portfolio/static/media/material-icons-sharp.3a4004a46a653d4b2166.woff",
+    "static/media/material-icons-outlined.woff2": "/portfolio/static/media/material-icons-outlined.6f420cf17cc0d7676fad.woff2",
+    "static/media/material-icons-sharp.woff2": "/portfolio/static/media/material-icons-sharp.219aa9140e099e6c72ed.woff2",
+    "static/media/material-icons.woff2": "/portfolio/static/media/material-icons.0c35d18bf06992036b69.woff2",
+    "static/media/Angular-logo.png": "/portfolio/static/media/Angular-logo.9fe4cc0c4f159317f309.png",
+    "static/media/Bootstrap-logo.png": "/portfolio/static/media/Bootstrap-logo.cb0fcc269e8250f3551b.png",
+    "static/media/Java-logo.png": "/portfolio/static/media/Java-logo.a8fdeb516585a40843a1.png",
+    "static/media/gmail-logo.png": "/portfolio/static/media/gmail-logo.248fdeff31771e6d41f0.png",
+    "static/media/linkedin-logo.png": "/portfolio/static/media/linkedin-logo.712c4ce3d6be06644d11.png",
+    "static/media/JavaScript-logo.png": "/portfolio/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
+    "index.html": "/portfolio/index.html",
+    "main.33d80ed3.css.map": "/portfolio/static/css/main.33d80ed3.css.map",
+    "main.a0da997b.js.map": "/portfolio/static/js/main.a0da997b.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33d80ed3.css",
+    "static/js/main.a0da997b.js"
+  ]
+}
