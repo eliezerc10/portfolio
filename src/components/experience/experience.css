@@ -22,7 +22,7 @@
     overflow: hidden;
     margin-bottom: 6px;
     ul {
-        margin-block-start: auto;
+        /* margin-block-start: auto; */
         padding-inline-start: 30px;
         margin-bottom: 0px;
         line-height: 25px;
