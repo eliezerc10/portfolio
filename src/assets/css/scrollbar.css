@@ -1,0 +1,21 @@
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Define the scrollbar style */
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Define the thumb style */
+body::-webkit-scrollbar-thumb {
+    background: #d6d6d652;
+    border-radius: 5px;
+}
+
+/* Define the button style when being hovered over */
+body::-webkit-scrollbar-button:hover {
+    background-color: #999999;
+}
