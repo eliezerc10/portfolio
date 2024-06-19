@@ -1,0 +1,2 @@
+.navbar-nav{background-color:#34353a;display:flex;gap:5%;justify-content:center;padding:20px 0;position:fixed;transition:background-color .25s;width:100%;z-index:1000;a{color:#a5a6a7;cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}a:active,a:hover{color:#f9f9f9}}.scroll-navbar{box-shadow:0 0 .5em #00000080;transition:box-shadow .25s}.active{color:#f9f9f9!important;text-decoration:underline!important}
+/*# sourceMappingURL=588.775afb29.chunk.css.map*/
