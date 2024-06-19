@@ -5,35 +5,47 @@ import { contactData } from './data/contactData';
 import { aboutLinks } from './data/aboutLinks';
 import { skills } from './data/skills';
 import { experiences } from './data/experiences';
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useMemo } from 'react';
 import { Loading } from './components/loading/Loading';
+import useImagesLoaded from './hooks/useImagesLoaded';
+
+const Navbar = lazy(() =>
+  import('./components/navbar/Navbar').then(({ Navbar }) => ({ default: Navbar })),
+)
+
+const About = lazy(() =>
+  import('./components/about/About').then(({ About }) => ({ default: About })),
+);
+
+const Skills = lazy(() =>
+  import('./components/skills/Skills').then(({ Skills }) => ({ default: Skills })),
+);
+
+const Experience = lazy(() =>
+  import('./components/experience/Experience').then(({ Experience }) => ({ default: Experience })),
+);
+
+const Contact = lazy(() =>
+  import('./components/contact/Contact').then(({ Contact }) => ({ default: Contact })),
+);
+
+const Regards = lazy(() =>
+  import('./components/regards/Regards').then(({ Regards }) => ({ default: Regards })),
+);
 
 function App() {
 
-  const Navbar = lazy(() =>
-    import('./components/navbar/Navbar')
-      .then(({ Navbar }) => ({ default: Navbar })),
-  )
+  const imageUrls = useMemo(() => [
+    ...aboutLinks.map(link => link.image),
+    ...skills.map(skill => skill.img)
+  ], []); 
 
-  const About = lazy(() =>
-    import('./components/about/About').then(({ About }) => ({ default: About })),
-  );
+  const imagesLoaded = useImagesLoaded(imageUrls);
 
-  const Skills = lazy(() =>
-    import('./components/skills/Skills').then(({ Skills }) => ({ default: Skills })),
-  );
+  if (!imagesLoaded) {
+    return <Loading />;
+  }
 
-  const Experience = lazy(() =>
-    import('./components/experience/Experience').then(({ Experience }) => ({ default: Experience })),
-  );
-
-  const Contact = lazy(() =>
-    import('./components/contact/Contact').then(({ Contact }) => ({ default: Contact })),
-  );
-
-  const Regards = lazy(() =>
-    import('./components/regards/Regards').then(({ Regards }) => ({ default: Regards })),
-  );
 
   return (
     <>
