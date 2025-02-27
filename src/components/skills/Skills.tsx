@@ -27,8 +27,8 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             modules={[Pagination, A11y, Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={4} 
-           /*  autoplay={{ delay: 1400, disableOnInteraction: false }} 
-            speed={400}  */
+            autoplay={{ delay: 1400, disableOnInteraction: false }} 
+            speed={400} 
             pagination={{ clickable: true }} 
             breakpoints={{
               320: { slidesPerView: 1 }, // Mobile (1 slide)
