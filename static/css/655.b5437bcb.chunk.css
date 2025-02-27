@@ -1,2 +1,0 @@
-.skills-section{margin:5%;text-align:center;-webkit-user-select:none;user-select:none}.skills-container{grid-gap:20px;align-items:center;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.skill-card{background-color:#3d3e42;border-radius:20px;height:88%;padding:10% 0 0;text-align:center;img{width:45%}}@media (min-width:1200px){.skills-container{grid-template-columns:repeat(4,minmax(200px,1fr))}}
-/*# sourceMappingURL=655.b5437bcb.chunk.css.map*/
