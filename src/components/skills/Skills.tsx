@@ -23,13 +23,12 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     <Element name="skills">
       <section className="skills-section">
         <h1>My Skills</h1>
-        <div>
           <Swiper
             modules={[Pagination, A11y, Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={4} 
-            autoplay={{ delay: 1500, disableOnInteraction: false }} 
-            speed={500} 
+           /*  autoplay={{ delay: 1400, disableOnInteraction: false }} 
+            speed={400}  */
             pagination={{ clickable: true }} 
             breakpoints={{
               320: { slidesPerView: 1 }, // Mobile (1 slide)
@@ -46,7 +45,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
       </section>
     </Element>
   );
