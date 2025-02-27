@@ -16,6 +16,7 @@
     padding: 2% 0 0;
     height: 88%;
     border-radius: 20px;
+    cursor: grab;
     
     img {
         width: 45%;
