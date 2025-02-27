@@ -13,7 +13,7 @@
 .skill-card {
     background-color: #3d3e42;
     text-align: center;
-    padding: 10% 0 0;
+    padding: 2% 0 0;
     height: 88%;
     border-radius: 20px;
     
@@ -21,6 +21,18 @@
         width: 45%;
     }
 }
+
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 30px; 
+}
+
+.swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (min-width:1200px) {
     .skills-container{

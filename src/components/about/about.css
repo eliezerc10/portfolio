@@ -27,11 +27,11 @@
     box-sizing: border-box;
     bottom: 0;
     right: 0;
-    filter: grayscale(100%);
 }
 
 .description {
     margin: 15% 10% 0;
+    z-index: 1;
 }
 
 .main-description {
@@ -108,7 +108,7 @@
     }
     .about-img {
         height: auto;
-        width: 70%;
+        width: 55%;
     }
 }
 
