@@ -31,6 +31,7 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                                     <li key={i}>{achievement}</li>
                                     ))}
                                 </ul>
+                                <ul><strong>Tech Stack:</strong> {experience.techStack.join(", ")}.</ul>
                             </div>
                             
                         </article>
