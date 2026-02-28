@@ -10,7 +10,7 @@ interface SEOProps {
 
 export const SEO: React.FC<SEOProps> = ({
   title = "Eliezer Castillo - Full Stack Developer",
-  description = "Full Stack Developer with 4+ years of experience in React, TypeScript, Java, Spring Boot, and modern web technologies. Passionate about creating innovative solutions.",
+  description = "Full Stack Developer with 6+ years of experience in React, TypeScript, Java, Spring Boot, and modern web technologies. Passionate about creating innovative solutions.",
   image = "https://eliezerc10.github.io/portfolio/profilePic.webp",
   url = "https://eliezerc10.github.io/portfolio/",
   type = "website"

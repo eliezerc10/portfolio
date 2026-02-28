@@ -19,12 +19,28 @@
   },
   "experience": {
     "title": "Experiencia",
+    "accordion": {
+      "readMore": "Leer más",
+      "showLess": "Mostrar menos",
+      "achievementsTitle": "Logros y Responsabilidades Clave",
+      "completeTechStack": "Stack Tecnológico Completo"
+    },
+    "summary": {
+      "title": "Experiencia Laboral Total",
+      "year": "Año",
+      "years": "Años",
+      "month": "Mes",
+      "months": "Meses",
+      "since": "Desde Noviembre 2019"
+    },
     "experiences": [
       {
-        "period": "Agosto 2024 - Actualidad",
+        "period": "Agosto 2024 - Presente",
         "company": "Netforemost, C. A.",
+        "companyUrl": "https://netforemost.com/",
         "role": "Desarrollador Full-Stack (Mid. Senior Lvl. 3)",
-        "techStack": ["TypeScript", "JavaScript", "React", "Angular", "Next.js", "Nest.js", "Spring Boot", "Java", "Tailwind CSS", "PostgreSQL", "MongoDB"],
+        "techStack": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot", "Java", "PostgreSQL", "Tailwind CSS", "MongoDB", "JavaScript"],
+        "techPriority": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot"],
         "achievements": [
           "Desarrollo de una plataforma financiera multi-tenant para una empresa líder del sector estadounidense, enfocada en la gestión y ejecución de pagos a preparadores de impuestos. Implementé en el backend (Java + Spring Boot) el procesamiento determinístico de reportes bancarios (XLS/XLSX), validaciones financieras estrictas, generación idempotente de transacciones y aislamiento por firma (tenant isolation), garantizando precisión contable y auditabilidad. Además, desarrollé la integración con una plataforma externa de pagos que permite ejecutar y conciliar transferencias bancarias hacia terceros de forma segura. En el frontend (Angular), construí módulos para la visualización de reportes, gestión de transacciones y dashboards financieros siguiendo arquitectura reactiva y buenas prácticas.",
           "Prestación de servicios de auditoría SEO técnica para una empresa tecnológica líder en el sector de inteligencia artificial y procesamiento de voz en Estados Unidos. Realicé análisis de arquitectura web, rendimiento, indexación, Core Web Vitals y estructura técnica, implementando mejoras directas a nivel de código para optimizar rastreabilidad, performance y estructura semántica. Como resultado, se logró mejorar la salud técnica del sitio en aproximadamente un 20%, incrementando la eficiencia de indexación y la calidad general del posicionamiento orgánico.",
@@ -35,8 +51,10 @@
       {
         "period": "Agosto 2022 - Agosto 2024",
         "company": "Seguros Caracas, C. A.",
+        "companyUrl": "https://www.seguroscaracas.com",
         "role": "Desarrollador Web (Semi-senior)",
-        "techStack": ["Angular", "Java", "TypeScript", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "techStack": ["Angular", "Java", "TypeScript", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
+        "techPriority": ["Angular", "Java", "TypeScript", "Spring"],
         "achievements": [
           "Desarrollo de aplicación web con Angular y servicio REST con Java para emitir pólizas de RCV desde cualquier dispositivo en sencillos pasos. Esta aplicación es muy significativa para el negocio porque incrementa el alcance y facilita la captación de nuevos clientes.",
           "Desarrollo de aplicación web con Angular y servicio REST con Java para cotizar productos de la compañía de forma dinámica, permitiendo el acceso a la información de las distintas tarifas por parte de los clientes potenciales, asegurados y asesores.",
@@ -47,8 +65,10 @@
       {
         "period": "Noviembre 2019 - Agosto 2022",
         "company": "Seguros Caracas, C. A.",
+        "companyUrl": "https://www.seguroscaracas.com",
         "role": "Desarrollador Web (Junior)",
-        "techStack": ["Java", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "techStack": ["Java", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
+        "techPriority": ["Java", "Spring", "JavaScript", "PrimeFaces"],
         "achievements": [
           "Desarrollo de librería de consulta de Google Maps para Oracle Forms. Esta librería permite a la gerencia de Workflow calcular el kilometraje para el servicio de asistencia vial, por ende, la compañía puede aumentar sus ingresos comercializando productos adaptados a las necesidades de los asegurados.",
           "Adaptación de distintas aplicaciones web para manejar distintas monedas permitiendo a la compañía emitir pólizas en monedas extranjeras."

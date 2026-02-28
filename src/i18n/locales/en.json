@@ -19,12 +19,28 @@
   },
   "experience": {
     "title": "Experience",
+    "accordion": {
+      "readMore": "Read more",
+      "showLess": "Show less",
+      "achievementsTitle": "Key Achievements & Responsibilities",
+      "completeTechStack": "Complete Tech Stack"
+    },
+    "summary": {
+      "title": "Total Work Experience",
+      "year": "Year",
+      "years": "Years",
+      "month": "Month",
+      "months": "Months",
+      "since": "Since November 2019"
+    },
     "experiences": [
       {
         "period": "August 2024 - Present",
         "company": "Netforemost, C. A.",
+        "companyUrl": "https://netforemost.com/",
         "role": "Full-Stack Developer (Mid. Senior Lvl. 3)",
-        "techStack": ["TypeScript", "JavaScript", "React", "Angular", "Next.js", "Nest.js", "Spring Boot", "Java", "Tailwind CSS", "PostgreSQL", "MongoDB"],
+        "techStack": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot", "Java", "PostgreSQL", "Tailwind CSS", "MongoDB", "JavaScript"],
+        "techPriority": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot"],
         "achievements": [
           "Development of a multi-tenant financial platform for a leading U.S. company, focused on managing and executing payments to tax preparers. Implemented backend (Java + Spring Boot) deterministic processing of bank reports (XLS/XLSX), strict financial validations, idempotent transaction generation, and tenant isolation, ensuring accounting accuracy and auditability. Additionally, developed integration with an external payment platform enabling secure execution and reconciliation of bank transfers to third parties. On the frontend (Angular), built modules for report visualization, transaction management, and financial dashboards following reactive architecture and best practices.",
           "Provided technical SEO audit services for a leading U.S. technology company in the AI and voice processing sector. Conducted analysis of web architecture, performance, indexing, Core Web Vitals, and technical structure, implementing direct code-level improvements to optimize crawlability, performance, and semantic structure. As a result, the site's technical health improved by approximately 20%, increasing indexing efficiency and overall organic ranking quality.",
@@ -35,8 +51,10 @@
       {
         "period": "August 2022 - August 2024",
         "company": "Seguros Caracas, C. A.",
+        "companyUrl": "https://www.seguroscaracas.com",
         "role": "Web Developer (Semi-senior)",
-        "techStack": ["Angular", "Java", "TypeScript", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "techStack": ["Angular", "Java", "TypeScript", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
+        "techPriority": ["Angular", "Java", "TypeScript", "Spring"],
         "achievements": [
           "Development of a web application with Angular and REST service with Java to issue RCV policies from any device in simple steps. This application is very significant for the business as it increases reach and facilitates the acquisition of new customers.",
           "Development of a web application with Angular and REST service with Java to dynamically quote company products, allowing access to information on different rates by potential customers, policyholders, and advisors.",
@@ -47,8 +65,10 @@
       {
         "period": "November 2019 - August 2022",
         "company": "Seguros Caracas, C. A.",
+        "companyUrl": "https://www.seguroscaracas.com",
         "role": "Web Developer (Junior)",
-        "techStack": ["Java", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "techStack": ["Java", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
+        "techPriority": ["Java", "Spring", "JavaScript", "PrimeFaces"],
         "achievements": [
           "Development of Google Maps query library for Oracle Forms. This library allows Workflow management to calculate mileage for roadside assistance service, therefore, the company can increase its income by marketing products adapted to policyholders' needs.",
           "Adaptation of different web applications to handle multiple currencies, allowing the company to issue policies in foreign currencies."

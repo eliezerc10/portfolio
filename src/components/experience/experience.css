@@ -1,95 +1,34 @@
 .experience-container {
-    background-color: #3d3e42;
-    padding-bottom: 0.5%;
-    user-select: none;
-    .exp-section {
-        position: relative;
-        margin: 8% 5% 5% 5%;
-        h1 {
-            position: absolute;
-            top: -56px;
-        }
-    }
-    .experiences-div {
-        padding-top: 40px;
-    }
+  background-color: #3d3e42;
+  user-select: none;
 }
 
-
-.experience-article {
-    display: flex;
-    gap: 25px;
-    overflow: hidden;
-    margin-bottom: 6px;
-    min-height: 280px;
-    ul {
-        /* margin-block-start: auto; */
-        padding-inline-start: 30px;
-        margin-bottom: 0px;
-        line-height: 25px;
-        flex: 1;
-        li {
-            margin-bottom: 10px;
-        }
-    }
-}
-.role-title, .company-title {
-    margin: 8px 0px;
-    span {
-        color: #f0bf6c;
-    }
+.exp-section {
+  position: relative;
+  padding: 60px 5% 3% 5%;
 }
 
-.pointer {
-    width: 48px;
-    padding: 6.8px;
-    height: fit-content;
-    height: -moz-max-content;
-    position: relative;
-    background: #5d5e60;
-    text-align: center;
-    margin-right: 5px;
-    span {
-        font-size: 1.5rem;
-    }
-  }
-.pointer:before {
-    content: "";
-    position: absolute;
-    right: -19.3px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #5d5e60;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
+.exp-section h1 {
+  position: absolute;
+  top: -28px;
+  left: 60px;
+  margin: 0;
+  color: #f9f9f9;
 }
 
 @media (max-width: 768px) {
-    .experience-article {
-        min-height: 320px;
-    }
-    
-    .role-title, .company-title {
-        font-size: 0.95rem;
-    }
+  .exp-section {
+    padding: 50px 4% 5% 4%;
+    margin-top: 50px;
+  }
+  .exp-section h1 {
+    left: 16px;
+    top: -24px;
+  }
 }
 
 @media (max-width: 480px) {
-    .experience-article {
-        min-height: 380px;
-        gap: 15px;
-    }
-    
-    .pointer {
-        width: 40px;
-        padding: 5px;
-    }
-    
-    .pointer:before {
-        right: -16px;
-        border-left: 16px solid #5d5e60;
-        border-top: 16px solid transparent;
-        border-bottom: 16px solid transparent;
-    }
+  .exp-section h1 {
+    font-size: 1.5rem;
+  }
 }
