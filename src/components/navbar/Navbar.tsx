@@ -1,26 +1,37 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll';
+import { throttle } from '../../utils/throttle';
 import '../navbar/navbar.css'
+
+interface LinkItem {
+    text: string;
+    url: string;
+    offset: number;
+}
+
 interface NavbarProps {
-    links: {
-        text: string
-        url: string,
-        offset: number
-    }[]
+    links: LinkItem[];
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ links }) => {
     
     const [scroll, setScroll] = useState(true);
+    
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const handleScroll = throttle(() => {
             setScroll(window.scrollY < 50);
-        });
+        }, 100);
+
+        window.addEventListener("scroll", handleScroll);
+        
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return(
         <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'}>
-            {links.map((link: any) =>
+            {links.map((link: LinkItem) =>
                 <Link className='prevent-select' 
                 activeClass="active" 
                 spy={true} 

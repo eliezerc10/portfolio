@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Portfolio - Eliezer Castillo
+
+Portfolio personal de Full Stack Developer optimizado para máximo rendimiento y mejores prácticas.
+
+## ✨ Optimizaciones Recientes
+
+Este proyecto ha sido optimizado con las siguientes mejoras:
+
+- ⚡ **Performance**: Lazy loading de imágenes, throttling de eventos, reducción de bundle size
+- 🔒 **Type Safety**: TypeScript strict mode, eliminación de tipos `any`
+- 🧹 **Code Quality**: Mejores prácticas de React, keys únicas, cleanup de event listeners
+- 📦 **Dependencies**: Actualizadas a TypeScript 5.3.3 y Node types 20.x
+
+Ver [OPTIMIZATIONS.md](./OPTIMIZATIONS.md) para detalles completos.
+
+---
+
+## 🚀 Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

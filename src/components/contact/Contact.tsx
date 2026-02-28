@@ -1,18 +1,21 @@
-
 import '../contact/contact.css'
 import { Element } from "react-scroll"
 
+interface ContactItem {
+    icon: string;
+    content: string;
+    url: string;
+}
+
+interface AboutLink {
+    image: string;
+    url: string;
+    alt: string;
+}
+
 interface ContactProps {
-    contactData: {
-        icon: string,
-        content: string,
-        url: string 
-    }[],
-    aboutLinks: {
-        image:string,
-        url: string,
-        alt:string
-    }[]
+    contactData: ContactItem[];
+    aboutLinks: AboutLink[];
 }
 
 export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => {
@@ -22,8 +25,8 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
                 <h1 className="contact-me-h1">Contact Me</h1>
                 <div className='contact-list'>
                     
-                    {contactData.map((element:any, i) =>
-                        <article key={i} className='contact-article'>
+                    {contactData.map((element: ContactItem) =>
+                        <article key={element.content} className='contact-article'>
                             <span className="material-icons">{element.icon}</span>
                             {element.url !== '' ? 
                             
@@ -38,10 +41,10 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
                     )}
                 </div>
                 <div className='bottom-links'>
-                    { aboutLinks.map((link: any, i) => 
-                            <article key={i}>
+                    { aboutLinks.map((link: AboutLink) => 
+                            <article key={link.url}>
                                 <a href={(link.url)} target='_blank' rel="noreferrer">
-                                    <img src={link.image} alt={link.alt} />
+                                    <img src={link.image} alt={link.alt} loading="lazy" />
                                 </a>
                             </article>
                         )

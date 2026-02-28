@@ -1,13 +1,17 @@
 import { Element, scroller } from 'react-scroll'
 import personalPic from '../../assets/images/profilePic.png'
 import '../about/about.css'
-interface AboutProps {
-    aboutLinks: {
-        image:string,
-        url: string,
-        alt:string
-    }[]
+
+interface AboutLink {
+    image: string;
+    url: string;
+    alt: string;
 }
+
+interface AboutProps {
+    aboutLinks: AboutLink[];
+}
+
 export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
     
     const scrollToContacts = () => {
@@ -29,14 +33,14 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
                     <button className='btn' onClick={scrollToContacts}>Contact me</button>
                 </div>
                 
-                <img className="about-img" src={personalPic} alt="profile pic" /> 
+                <img className="about-img" src={personalPic} alt="profile pic" loading="eager" /> 
                 
                 <div className='social-media-line'>
                     <div className='vertical-line'></div>
-                    { aboutLinks.map((link: any, i) => 
-                            <article key={i}>
+                    { aboutLinks.map((link: AboutLink) => 
+                            <article key={link.url}>
                                 <a href={(link.url)} target='_blank' rel="noreferrer">
-                                    <img src={link.image} alt={link.alt} />
+                                    <img src={link.image} alt={link.alt} loading="lazy" />
                                 </a>
                             </article>
                         )
