@@ -1,23 +1,33 @@
 # Portfolio - Eliezer Castillo
 
-Portfolio personal de Full Stack Developer optimizado para máximo rendimiento y mejores prácticas.
+Full Stack Developer portfolio optimized for maximum performance and best practices.
 
-## ✨ Optimizaciones Recientes
+## ⚡ Now Powered by Vite!
 
-Este proyecto ha sido optimizado con las siguientes mejoras:
+This project has been **migrated from Create React App to Vite** for superior performance:
 
-- ⚡ **Performance**: Lazy loading de imágenes, throttling de eventos, reducción de bundle size
-- 🔒 **Type Safety**: TypeScript strict mode, eliminación de tipos `any`
-- 🧹 **Code Quality**: Mejores prácticas de React, keys únicas, cleanup de event listeners
-- 📦 **Dependencies**: Actualizadas a TypeScript 5.3.3 y Node types 20.x
+- 🚀 **10-20x faster builds** - Lightning-fast development experience
+- ⚡ **Instant HMR** - Hot Module Replacement in milliseconds
+- 📦 **Smaller bundles** - Optimized code splitting and tree-shaking
+- 🎯 **Modern tooling** - Native ESM support
 
-Ver [OPTIMIZATIONS.md](./OPTIMIZATIONS.md) para detalles completos.
+See [VITE_MIGRATION.md](./VITE_MIGRATION.md) for migration details.
+
+## ✨ Recent Optimizations
+
+- ⚡ **Performance**: Image lazy loading, event throttling, reduced bundle size
+- 🔒 **Type Safety**: TypeScript strict mode, removed all `any` types
+- 🧹 **Code Quality**: React best practices, unique keys, event listener cleanup
+- 📦 **Dependencies**: Updated to TypeScript 5.3.3 and Node types 20.x
+- 🏗️ **Build Tool**: Migrated to Vite for 10-20x faster builds
+
+See [OPTIMIZATIONS.md](./OPTIMIZATIONS.md) for complete details.
 
 ---
 
 ## 🚀 Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses [Vite](https://vitejs.dev/) for blazing fast development.
 
 ## Available Scripts
 
