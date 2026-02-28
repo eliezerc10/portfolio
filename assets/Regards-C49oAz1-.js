@@ -1,0 +1,1 @@
+import{u as s,j as e}from"./react-vendor-C_6XO5NE.js";import"./i18n-vendor-2nmSCpnI.js";const r=()=>{const{t:r}=s();return e.jsx("section",{className:"regards-section",children:e.jsx("h2",{className:"bottom-title",children:r("regards.message")})})};export{r as Regards};
