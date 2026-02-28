@@ -5,6 +5,8 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import { CloudinaryImage } from "../common/CloudinaryImage";
+import { getCloudinaryPublicId } from "../../config/cloudinaryMapping";
 import "../skills/skills.css";
 import "swiper/css";
 import "swiper/css/bundle";
@@ -39,7 +41,14 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           >
             {skills.map((skill: Skill) => (
               <SwiperSlide className="skill-card" key={skill.name}>
-                <img src={skill.img} alt={skill.name} loading="lazy" />
+                <CloudinaryImage
+                  publicId={getCloudinaryPublicId(skill.name)}
+                  localSrc={skill.img}
+                  alt={skill.name}
+                  loading="lazy"
+                  width={256}
+                  height={256}
+                />
                 <h3>{skill.name}</h3>
               </SwiperSlide>
             ))}

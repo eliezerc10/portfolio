@@ -1,5 +1,7 @@
 import { Element, scroller } from 'react-scroll'
-import personalPic from '../../assets/images/profilePic.png'
+import personalPic from '../../assets/images/profilePic.webp'
+import { CloudinaryImage } from '../common/CloudinaryImage'
+import { getCloudinaryPublicId } from '../../config/cloudinaryMapping'
 import '../about/about.css'
 
 interface AboutLink {
@@ -33,14 +35,29 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
                     <button className='btn' onClick={scrollToContacts}>Contact me</button>
                 </div>
                 
-                <img className="about-img" src={personalPic} alt="profile pic" loading="eager" /> 
+                <CloudinaryImage
+                    publicId={getCloudinaryPublicId('profilePic')}
+                    localSrc={personalPic}
+                    alt="profile pic"
+                    className="about-img"
+                    loading="eager"
+                    width={1024}
+                    height={1024}
+                /> 
                 
                 <div className='social-media-line'>
                     <div className='vertical-line'></div>
                     { aboutLinks.map((link: AboutLink) => 
                             <article key={link.url}>
                                 <a href={(link.url)} target='_blank' rel="noreferrer">
-                                    <img src={link.image} alt={link.alt} loading="lazy" />
+                                    <CloudinaryImage
+                                        publicId={getCloudinaryPublicId(link.alt)}
+                                        localSrc={link.image}
+                                        alt={link.alt}
+                                        loading="lazy"
+                                        width={64}
+                                        height={64}
+                                    />
                                 </a>
                             </article>
                         )

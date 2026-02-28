@@ -1,6 +1,6 @@
-import linkedinLogo from '../assets/images/linkedin-logo.png';
-import gmailLogo from '../assets/images/gmail-logo.png';
-import whatsappLogo from '../assets/images/whatsapp-logo.png';
+import linkedinLogo from '../assets/images/linkedin-logo.webp';
+import gmailLogo from '../assets/images/gmail-logo.webp';
+import whatsappLogo from '../assets/images/whatsapp-logo.webp';
 
 export const aboutLinks = [
     {

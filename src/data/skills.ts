@@ -1,13 +1,13 @@
-import JavascriptLogo from '../assets/images/JavaScript-logo.png';
-import TypescriptLogo from '../assets/images/Typescript-logo.png';
-import JavaLogo from '../assets/images/Java-logo.png';
-import AngularLogo from '../assets/images/Angular-logo.png';
-import ReactLogo from '../assets/images/React-logo.png';
-import SpringLogo from '../assets/images/Spring-logo.png';
-import PlsqlLogo from '../assets/images/Plsql-logo.png';
-import BootstrapLogo from '../assets/images/Bootstrap-logo.png';
-import NextLogo from '../assets/images/Next-logo.png';
-import NestLogo from '../assets/images/Nest-logo.png';
+import JavascriptLogo from '../assets/images/JavaScript-logo.webp';
+import TypescriptLogo from '../assets/images/Typescript-logo.webp';
+import JavaLogo from '../assets/images/Java-logo.webp';
+import AngularLogo from '../assets/images/Angular-logo.webp';
+import ReactLogo from '../assets/images/React-logo.webp';
+import SpringLogo from '../assets/images/Spring-logo.webp';
+import PlsqlLogo from '../assets/images/Plsql-logo.webp';
+import BootstrapLogo from '../assets/images/Bootstrap-logo.webp';
+import NextLogo from '../assets/images/Next-logo.webp';
+import NestLogo from '../assets/images/Nest-logo.webp';
 export const skills = [
   { img: TypescriptLogo, name: 'Typescript' },
   { img: JavascriptLogo, name: 'Javascript' },

@@ -1,5 +1,7 @@
 import '../contact/contact.css'
 import { Element } from "react-scroll"
+import { CloudinaryImage } from '../common/CloudinaryImage'
+import { getCloudinaryPublicId } from '../../config/cloudinaryMapping'
 
 interface ContactItem {
     icon: string;
@@ -28,8 +30,7 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
                     {contactData.map((element: ContactItem) =>
                         <article key={element.content} className='contact-article'>
                             <span className="material-icons">{element.icon}</span>
-                            {element.url !== '' ? 
-                            
+                            {element.url ? 
                                 <a href={element.url}>
                                     <span className='contact-content'>{element.content}</span>  
                                 </a> 
@@ -44,7 +45,14 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
                     { aboutLinks.map((link: AboutLink) => 
                             <article key={link.url}>
                                 <a href={(link.url)} target='_blank' rel="noreferrer">
-                                    <img src={link.image} alt={link.alt} loading="lazy" />
+                                    <CloudinaryImage
+                                        publicId={getCloudinaryPublicId(link.alt)}
+                                        localSrc={link.image}
+                                        alt={link.alt}
+                                        loading="lazy"
+                                        width={64}
+                                        height={64}
+                                    />
                                 </a>
                             </article>
                         )
