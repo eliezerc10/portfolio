@@ -42,8 +42,9 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
                     alt="profile pic"
                     className="about-img"
                     loading="eager"
-                    width={1024}
-                    height={1024}
+                    fetchPriority="high"
+                    width={529}
+                    height={529}
                 /> 
                 
                 <div className='social-media-line'>
@@ -56,8 +57,8 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
                                         localSrc={link.image}
                                         alt={link.alt}
                                         loading="lazy"
-                                        width={64}
-                                        height={64}
+                                        width={44}
+                                        height={44}
                                     />
                                 </a>
                             </article>

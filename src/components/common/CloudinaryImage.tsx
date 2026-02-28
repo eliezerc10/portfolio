@@ -1,4 +1,5 @@
 import { AdvancedImage } from '@cloudinary/react';
+import { scale } from '@cloudinary/url-gen/actions/resize';
 import { cld, isCloudinaryEnabled } from '../../config/cloudinary';
 
 interface CloudinaryImageProps {
@@ -9,6 +10,7 @@ interface CloudinaryImageProps {
   height?: number;
   className?: string;
   loading?: 'lazy' | 'eager';
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 /**
@@ -20,18 +22,33 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   publicId,
   localSrc,
   alt,
+  width,
   className,
   loading = 'lazy',
+  fetchPriority,
 }) => {
   if (isCloudinaryEnabled()) {
     // Use Cloudinary with automatic optimization
-    // Only apply format and quality, let CSS handle sizing
     const img = cld
       .image(publicId)
       .format('auto') // Auto-format (WebP, AVIF based on browser)
       .quality('auto'); // Auto-quality optimization
 
-    return <AdvancedImage cldImg={img} alt={alt} className={className} />;
+    // Apply responsive resize based on display dimensions
+    // Use scale to maintain aspect ratio without cropping
+    if (width) {
+      // Scale to max width (2x for retina displays)
+      img.resize(scale().width(width * 2));
+    }
+
+    return (
+      <AdvancedImage 
+        cldImg={img} 
+        alt={alt} 
+        className={className}
+        {...(fetchPriority && { fetchpriority: fetchPriority })}
+      />
+    );
   }
 
   // Fallback to local image
@@ -42,6 +59,7 @@ export const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
       alt={alt}
       className={className}
       loading={loading}
+      {...(fetchPriority && { fetchpriority: fetchPriority })}
     />
   );
 };

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:wght@300;400&family=Onest:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Comfortaa:wght@300..700&family=Montserrat:wght@300;400&family=Onest:wght@100..900&display=swap');
+/* Fonts loaded via HTML <link> tags for better performance */
 @import 'material-icons/iconfont/material-icons.css';
 @import './assets/css/scrollbar.css';
 body {
@@ -18,7 +17,6 @@ h1 {
 
 button {
   font-family: "Comfortaa", sans-serif;
-  width: auto;
   box-shadow: none;
   padding: 10px 15px;
   font-size: 20px;

@@ -47,8 +47,8 @@ export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
                   localSrc={skill.img}
                   alt={skill.name}
                   loading="lazy"
-                  width={256}
-                  height={256}
+                  width={175}
+                  height={175}
                 />
                 <h3>{skill.name}</h3>
               </SwiperSlide>

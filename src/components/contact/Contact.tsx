@@ -51,8 +51,8 @@ export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }
                                         localSrc={link.image}
                                         alt={link.alt}
                                         loading="lazy"
-                                        width={64}
-                                        height={64}
+                                        width={44}
+                                        height={44}
                                     />
                                 </a>
                             </article>
