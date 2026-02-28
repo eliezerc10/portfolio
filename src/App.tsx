@@ -8,6 +8,7 @@ import { experiences } from './data/experiences';
 import { Suspense, lazy, useMemo } from 'react';
 import { Loading } from './components/loading/Loading';
 import useImagesLoaded from './hooks/useImagesLoaded';
+import { SEO } from './components/common/SEO';
 
 const Navbar = lazy(() =>
   import('./components/navbar/Navbar').then(({ Navbar }) => ({ default: Navbar })),
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <SEO />
       <Suspense fallback={<Loading />}>
         <header>
           <Navbar links={links} />
