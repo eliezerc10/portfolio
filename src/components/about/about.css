@@ -17,7 +17,6 @@
     display: flex;
     line-height: 25px;
     user-select: none;
-    min-height: 200px;
     strong {
         color: #ffc86b;
     }
