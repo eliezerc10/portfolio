@@ -1,0 +1,28 @@
+/* Critical CSS - Above the fold styles */
+body {
+  margin: 0;
+  font-family: "Comfortaa", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #31333b;
+  color: #f9f9f9;
+}
+
+h1 {
+  font-family: "Besley", Georgia, serif; 
+  font-size: xx-large;
+}
+
+button {
+  font-family: "Comfortaa", sans-serif;
+  box-shadow: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;  
+}
+
+.prevent-select {
+  user-select: none;
+}

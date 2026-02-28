@@ -1,13 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { criticalCssPlugin } from './vite-plugin-critical-css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    criticalCssPlugin()
+  ],
   base: '/portfolio/',
+  css: {
+    devSourcemap: true,
+    postcss: './postcss.config.js',
+  },
   build: {
     outDir: 'build',
     sourcemap: true,
+    cssCodeSplit: true,
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
