@@ -30,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
     }, []);
 
     return(
-        <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'}>
+        <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'} aria-label="Main navigation">
             {links.map((link: LinkItem) =>
                 <Link className='prevent-select' 
                 activeClass="active" 
@@ -39,7 +39,11 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
                 offset={link.offset} 
                 duration={500}
                 isDynamic={true}
-                key={link.url}  to={link.url}>{link.text}</Link>
+                key={link.url}  
+                to={link.url}
+                aria-label={`Navigate to ${link.text} section`}
+                role="button"
+                tabIndex={0}>{link.text}</Link>
             )}
         </nav>
     );

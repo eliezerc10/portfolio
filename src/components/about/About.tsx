@@ -33,7 +33,7 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
                         <br></br>
                         FULL-STACK WEB DEVELOPER
                     </p>
-                    <button className='btn' onClick={scrollToContacts}>Contact me</button>
+                    <button className='btn' onClick={scrollToContacts} aria-label="Scroll to contact section">Contact me</button>
                 </div>
                 
                 <CloudinaryImage
@@ -51,11 +51,11 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
                     <div className='vertical-line'></div>
                     { aboutLinks.map((link: AboutLink) => 
                             <article key={link.url}>
-                                <a href={(link.url)} target='_blank' rel="noreferrer">
+                                <a href={(link.url)} target='_blank' rel="noreferrer" aria-label={`Visit my ${link.alt} profile`}>
                                     <CloudinaryImage
                                         publicId={getCloudinaryPublicId(link.alt)}
                                         localSrc={link.image}
-                                        alt={link.alt}
+                                        alt={`${link.alt} icon`}
                                         loading="lazy"
                                         width={44}
                                         height={44}

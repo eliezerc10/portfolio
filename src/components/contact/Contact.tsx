@@ -45,11 +45,11 @@ export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }
                 <div className='bottom-links'>
                     { aboutLinks.map((link: AboutLink) => 
                             <article key={link.url}>
-                                <a href={(link.url)} target='_blank' rel="noreferrer">
+                                <a href={(link.url)} target='_blank' rel="noreferrer" aria-label={`Visit my ${link.alt} profile`}>
                                     <CloudinaryImage
                                         publicId={getCloudinaryPublicId(link.alt)}
                                         localSrc={link.image}
-                                        alt={link.alt}
+                                        alt={`${link.alt} icon`}
                                         loading="lazy"
                                         width={44}
                                         height={44}
