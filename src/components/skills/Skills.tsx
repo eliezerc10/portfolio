@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Element } from "react-scroll";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -20,7 +21,7 @@ interface SkillsProps {
   skills: Skill[];
 }
 
-export const Skills: React.FC<SkillsProps> = ({ skills }) => {
+export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
   return (
     <Element name="skills">
       <section className="skills-section">
@@ -56,4 +57,4 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
       </section>
     </Element>
   );
-};
+});

@@ -10,10 +10,39 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'swiper-vendor': ['swiper'],
-          'scroll-vendor': ['react-scroll']
+        manualChunks: (id) => {
+          // React core libraries
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react-vendor';
+          }
+          // Swiper library
+          if (id.includes('node_modules/swiper')) {
+            return 'swiper-vendor';
+          }
+          // React Scroll library
+          if (id.includes('node_modules/react-scroll')) {
+            return 'scroll-vendor';
+          }
+          // Cloudinary libraries (large, separate chunk)
+          if (id.includes('node_modules/@cloudinary')) {
+            return 'cloudinary-vendor';
+          }
+          // Component-based splitting for lazy-loaded components
+          if (id.includes('src/components/navbar')) {
+            return 'navbar';
+          }
+          if (id.includes('src/components/about')) {
+            return 'about';
+          }
+          if (id.includes('src/components/skills')) {
+            return 'skills';
+          }
+          if (id.includes('src/components/experience')) {
+            return 'experience';
+          }
+          if (id.includes('src/components/contact')) {
+            return 'contact';
+          }
         }
       }
     }

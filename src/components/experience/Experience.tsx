@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import '../experience/experience.css'
 import { Element } from "react-scroll"
 
@@ -13,7 +14,7 @@ interface ExperienceProps {
     experiences: ExperienceItem[];
 }
 
-export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
+export const Experience: React.FC<ExperienceProps> = memo(({ experiences }) => {
     return (
         <Element  className='experience-container' name="experience">
             <section className='exp-section'>
@@ -41,4 +42,4 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
             </section>
         </Element>
     )
-}
+});

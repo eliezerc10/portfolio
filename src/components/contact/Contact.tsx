@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import '../contact/contact.css'
 import { Element } from "react-scroll"
 import { CloudinaryImage } from '../common/CloudinaryImage'
@@ -20,7 +21,7 @@ interface ContactProps {
     aboutLinks: AboutLink[];
 }
 
-export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => {
+export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }) => {
     return(
         <Element name="contact-sect">
             <section className='contact-section'>
@@ -61,4 +62,4 @@ export const Contact: React.FC<ContactProps> = ({ contactData, aboutLinks }) => 
             </section>
         </Element>
     )
-}
+});

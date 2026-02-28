@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Element, scroller } from 'react-scroll'
 import personalPic from '../../assets/images/profilePic.webp'
 import { CloudinaryImage } from '../common/CloudinaryImage'
@@ -14,7 +15,7 @@ interface AboutProps {
     aboutLinks: AboutLink[];
 }
 
-export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
+export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
     
     const scrollToContacts = () => {
         scroller.scrollTo('contact-sect', {
@@ -85,4 +86,4 @@ export const About: React.FC<AboutProps> = ({ aboutLinks }) => {
         </>
         
     )
-}
+});

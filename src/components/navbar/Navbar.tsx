@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { Link } from 'react-scroll';
 import { throttle } from '../../utils/throttle';
 import '../navbar/navbar.css'
@@ -13,7 +13,7 @@ interface NavbarProps {
     links: LinkItem[];
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ links }) => {
+export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
     
     const [scroll, setScroll] = useState(true);
     
@@ -42,5 +42,5 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
                 key={link.url}  to={link.url}>{link.text}</Link>
             )}
         </nav>
-    )
-}
+    );
+});
