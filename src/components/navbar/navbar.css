@@ -60,7 +60,7 @@
 
 @media (max-width: 768px) {
     .navbar-nav {
-        padding: 12px 16px;
+        padding: 16px;
     }
     
     .navbar-content > a {
