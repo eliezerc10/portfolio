@@ -21,21 +21,19 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
     
     useEffect(() => {
         const handleScroll = throttle(() => {
-            setScroll(window.scrollY < 50);
+            setScroll(globalThis.scrollY < 50);
         }, 100);
 
-        window.addEventListener("scroll", handleScroll);
+        globalThis.addEventListener("scroll", handleScroll);
         
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            globalThis.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
     return(
         <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'} aria-label="Main navigation">
-
-            <div className="navbar-left"></div>
-            <div className="navbar-center">
+            <div className="navbar-content">
                 {links.map((link: LinkItem) =>
                     <Link className='prevent-select' 
                     activeClass="active" 
@@ -50,8 +48,7 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
                     role="button"
                     tabIndex={0}>{t(`nav.${link.url}`)}</Link>
                 )}
-            </div>
-            <div className="navbar-right">
+                <div className="navbar-separator"></div>
                 <LanguageToggle />
             </div>
         </nav>

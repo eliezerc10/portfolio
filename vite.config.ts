@@ -1,31 +1,42 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { criticalCssPlugin } from './vite-plugin-critical-css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    criticalCssPlugin()
-  ],
+  plugins: [react()],
   base: '/portfolio/',
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js',
-  },
   build: {
     outDir: 'build',
-    sourcemap: true,
-    cssCodeSplit: true,
+    sourcemap: false, // Disable sourcemaps in production for smaller bundle
+    minify: 'terser', // Use terser for better minification
     cssMinify: true,
+    cssCodeSplit: true,
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
+      },
+      mangle: {
+        safari10: true
+      },
+      format: {
+        comments: false
+      }
+    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // React core libraries
+          // React core libraries (critical, load first)
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react-vendor';
           }
-          // Swiper library
+          // i18next libraries
+          if (id.includes('node_modules/i18next') || id.includes('node_modules/react-i18next')) {
+            return 'i18n-vendor';
+          }
+          // Swiper library (lazy load)
           if (id.includes('node_modules/swiper')) {
             return 'swiper-vendor';
           }
@@ -33,29 +44,19 @@ export default defineConfig({
           if (id.includes('node_modules/react-scroll')) {
             return 'scroll-vendor';
           }
-          // Cloudinary libraries (large, separate chunk)
+          // Cloudinary libraries (large, separate chunk, lazy load)
           if (id.includes('node_modules/@cloudinary')) {
             return 'cloudinary-vendor';
           }
-          // Component-based splitting for lazy-loaded components
-          if (id.includes('src/components/navbar')) {
-            return 'navbar';
-          }
-          if (id.includes('src/components/about')) {
-            return 'about';
-          }
-          if (id.includes('src/components/skills')) {
-            return 'skills';
-          }
-          if (id.includes('src/components/experience')) {
-            return 'experience';
-          }
-          if (id.includes('src/components/contact')) {
-            return 'contact';
-          }
-        }
+        },
+        // Optimize chunk file names
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000, // Increase warning limit to 1000kb
+    reportCompressedSize: true
   },
   server: {
     port: 3000,

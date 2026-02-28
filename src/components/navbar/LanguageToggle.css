@@ -17,14 +17,10 @@
 
 .language-toggle:hover {
   background: rgba(240, 191, 108, 0.2);
-  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 12px rgba(240, 191, 108, 0.4);
   border-color: #ffcc7a;
 }
 
-.language-toggle:active {
-  transform: translateY(0) scale(1);
-}
 
 .language-toggle.animating {
   pointer-events: none;
