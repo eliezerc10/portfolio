@@ -1,8 +1,14 @@
 import { Component, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ErrorBoundary.css';
 
 interface Props {
   children: ReactNode;
+  translations?: {
+    title: string;
+    message: string;
+    button: string;
+  };
 }
 
 interface State {
@@ -10,7 +16,7 @@ interface State {
   error: Error | null;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundaryClass extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -44,13 +50,18 @@ export class ErrorBoundary extends Component<Props, State> {
 
   render(): ReactNode {
     if (this.state.hasError) {
+      const { title, message, button } = this.props.translations || {
+        title: 'Oops! Something went wrong',
+        message: "We're sorry, but something unexpected happened. Please try refreshing the page.",
+        button: 'Refresh Page'
+      };
+
       return (
         <div className="error-boundary">
           <div className="error-boundary-content">
-            <h1>Oops! Something went wrong</h1>
+            <h1>{title}</h1>
             <p className="error-message">
-              We're sorry, but something unexpected happened. 
-              Please try refreshing the page.
+              {message}
             </p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="error-details">
@@ -59,7 +70,7 @@ export class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
             <button className="error-boundary-btn" onClick={this.handleReset}>
-              Refresh Page
+              {button}
             </button>
           </div>
         </div>
@@ -69,3 +80,19 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export const ErrorBoundary: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const { t } = useTranslation();
+  
+  return (
+    <ErrorBoundaryClass
+      translations={{
+        title: t('error.title'),
+        message: t('error.message'),
+        button: t('error.button')
+      }}
+    >
+      {children}
+    </ErrorBoundaryClass>
+  );
+};

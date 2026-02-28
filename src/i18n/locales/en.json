@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "I'M",
+    "name": "Eliezer Castillo",
+    "title": "FULL-STACK DEVELOPER",
+    "contactBtn": "Contact me"
+  },
+  "about": {
+    "title": "About",
+    "description": "As a <strong>Full Stack Developer</strong> with over <strong>six years of experience</strong>, I specialize in developing, maintaining, and evolving web applications using Java, TypeScript, and JavaScript. I have solid expertise in technologies such as Next.js, React, Angular, Node.js, Express, NestJS, Spring Boot, and SQL. I focus on building scalable, maintainable solutions aligned with architectural best practices, delivering technical and strategic value to every project I participate in."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experience",
+    "experiences": [
+      {
+        "period": "August 2024 - Present",
+        "company": "Netforemost, C. A.",
+        "role": "Full-Stack Developer (Mid. Senior Lvl. 3)",
+        "techStack": ["TypeScript", "JavaScript", "React", "Angular", "Next.js", "Nest.js", "Spring Boot", "Java", "Tailwind CSS", "PostgreSQL", "MongoDB"],
+        "achievements": [
+          "Development of a multi-tenant financial platform for a leading U.S. company, focused on managing and executing payments to tax preparers. Implemented backend (Java + Spring Boot) deterministic processing of bank reports (XLS/XLSX), strict financial validations, idempotent transaction generation, and tenant isolation, ensuring accounting accuracy and auditability. Additionally, developed integration with an external payment platform enabling secure execution and reconciliation of bank transfers to third parties. On the frontend (Angular), built modules for report visualization, transaction management, and financial dashboards following reactive architecture and best practices.",
+          "Provided technical SEO audit services for a leading U.S. technology company in the AI and voice processing sector. Conducted analysis of web architecture, performance, indexing, Core Web Vitals, and technical structure, implementing direct code-level improvements to optimize crawlability, performance, and semantic structure. As a result, the site's technical health improved by approximately 20%, increasing indexing efficiency and overall organic ranking quality.",
+          "Development of a pre-auction vehicle platform in the United States, where users could explore automotive inventory and place pre-bids. On the frontend (Next.js + TypeScript), implemented a dynamic vehicle catalog with filters, pagination, and optimized detail view for a smooth and scalable experience. On the backend (NestJS), developed APIs for inventory management, efficient queries, and bid handling, ensuring a modular and maintainable architecture. The platform operated integrated with a payment gateway for managing deposits and transactions associated with bids.",
+          "Development of a learning platform for medical trainees from North American universities using modern technologies: Nest.js, Next.js, Tailwind CSS, and TypeORM. The platform is fully responsive, ensuring a consistent user experience across mobile and desktop devices. It includes customized dashboards for each user type (administrators, clinicians, university staff, and students), tailored to their specific needs and workflows."
+        ]
+      },
+      {
+        "period": "August 2022 - August 2024",
+        "company": "Seguros Caracas, C. A.",
+        "role": "Web Developer (Semi-senior)",
+        "techStack": ["Angular", "Java", "TypeScript", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "achievements": [
+          "Development of a web application with Angular and REST service with Java to issue RCV policies from any device in simple steps. This application is very significant for the business as it increases reach and facilitates the acquisition of new customers.",
+          "Development of a web application with Angular and REST service with Java to dynamically quote company products, allowing access to information on different rates by potential customers, policyholders, and advisors.",
+          "Development of REST web service to issue RCV, home, and personal accident policies through insurance advisor portals and/or companies. This service enables integration with other companies, representing the generation of new business opportunities.",
+          "Development of a web application for managing installation appointments for vehicle security devices by policyholders, advisors, and analysts. Through this application, appointment requests are facilitated through different portals."
+        ]
+      },
+      {
+        "period": "November 2019 - August 2022",
+        "company": "Seguros Caracas, C. A.",
+        "role": "Web Developer (Junior)",
+        "techStack": ["Java", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "achievements": [
+          "Development of Google Maps query library for Oracle Forms. This library allows Workflow management to calculate mileage for roadside assistance service, therefore, the company can increase its income by marketing products adapted to policyholders' needs.",
+          "Adaptation of different web applications to handle multiple currencies, allowing the company to issue policies in foreign currencies."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me"
+  },
+  "regards": {
+    "message": "Your time is valuable, thank you for sharing it!"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "error": {
+    "title": "Oops! Something went wrong",
+    "message": "We're sorry, but something unexpected happened. Please try refreshing the page.",
+    "button": "Refresh Page"
+  }
+}

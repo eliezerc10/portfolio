@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "SOY",
+    "name": "Eliezer Castillo",
+    "title": "DESARROLLADOR FULL-STACK",
+    "contactBtn": "Contáctame"
+  },
+  "about": {
+    "title": "Acerca",
+    "description": "Desarrollador Full-Stack con <strong>más de seis años de experiencia</strong> en el desarrollo, mantenimiento y evolución de aplicaciones web utilizando Java, TypeScript y JavaScript. Experiencia sólida en tecnologías como Next.js, React, Angular, Node.js, Express, NestJS, Spring Boot y SQL. Enfocado en la construcción de soluciones escalables, mantenibles y alineadas a buenas prácticas de arquitectura, aportando valor técnico y estratégico a cada proyecto en el que participo."
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "experiences": [
+      {
+        "period": "Agosto 2024 - Actualidad",
+        "company": "Netforemost, C. A.",
+        "role": "Desarrollador Full-Stack (Mid. Senior Lvl. 3)",
+        "techStack": ["TypeScript", "JavaScript", "React", "Angular", "Next.js", "Nest.js", "Spring Boot", "Java", "Tailwind CSS", "PostgreSQL", "MongoDB"],
+        "achievements": [
+          "Desarrollo de una plataforma financiera multi-tenant para una empresa líder del sector estadounidense, enfocada en la gestión y ejecución de pagos a preparadores de impuestos. Implementé en el backend (Java + Spring Boot) el procesamiento determinístico de reportes bancarios (XLS/XLSX), validaciones financieras estrictas, generación idempotente de transacciones y aislamiento por firma (tenant isolation), garantizando precisión contable y auditabilidad. Además, desarrollé la integración con una plataforma externa de pagos que permite ejecutar y conciliar transferencias bancarias hacia terceros de forma segura. En el frontend (Angular), construí módulos para la visualización de reportes, gestión de transacciones y dashboards financieros siguiendo arquitectura reactiva y buenas prácticas.",
+          "Prestación de servicios de auditoría SEO técnica para una empresa tecnológica líder en el sector de inteligencia artificial y procesamiento de voz en Estados Unidos. Realicé análisis de arquitectura web, rendimiento, indexación, Core Web Vitals y estructura técnica, implementando mejoras directas a nivel de código para optimizar rastreabilidad, performance y estructura semántica. Como resultado, se logró mejorar la salud técnica del sitio en aproximadamente un 20%, incrementando la eficiencia de indexación y la calidad general del posicionamiento orgánico.",
+          "Desarrollo de una plataforma de pre-subasta de vehículos en Estados Unidos, donde los usuarios podían explorar inventario automotriz y realizar ofertas previas. En el frontend (Next.js + TypeScript), implementé el catálogo dinámico de vehículos con filtros, paginación y vista detallada optimizada para una experiencia fluida y escalable. En el backend (NestJS), desarrollé APIs para la gestión de inventario, consultas eficientes y manejo de ofertas, asegurando una arquitectura modular y mantenible. La plataforma operaba integrada con una pasarela de pagos para la gestión de depósitos y transacciones asociadas a las ofertas.",
+          "Desarrollo de una plataforma de aprendizaje para médicos en formación de universidades norteamericanas utilizando tecnologías modernas: Nest.js, Next.js, Tailwind CSS y TypeORM. La plataforma es completamente responsive, garantizando una experiencia de usuario consistente en dispositivos móviles y de escritorio. Incluye dashboards personalizados para cada tipo de usuario (administradores, clínicos, universitarios y estudiantes), adaptados a sus necesidades específicas y flujos de trabajo."
+        ]
+      },
+      {
+        "period": "Agosto 2022 - Agosto 2024",
+        "company": "Seguros Caracas, C. A.",
+        "role": "Desarrollador Web (Semi-senior)",
+        "techStack": ["Angular", "Java", "TypeScript", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "achievements": [
+          "Desarrollo de aplicación web con Angular y servicio REST con Java para emitir pólizas de RCV desde cualquier dispositivo en sencillos pasos. Esta aplicación es muy significativa para el negocio porque incrementa el alcance y facilita la captación de nuevos clientes.",
+          "Desarrollo de aplicación web con Angular y servicio REST con Java para cotizar productos de la compañía de forma dinámica, permitiendo el acceso a la información de las distintas tarifas por parte de los clientes potenciales, asegurados y asesores.",
+          "Desarrollo de web service REST para emitir pólizas de RCV, hogar y accidentes personales a través de portales de asesores de seguros y/o empresas. Este servicio permite la integración con otras compañías, representando la generación de nuevas oportunidades de negocio.",
+          "Desarrollo de aplicación web para la gestión de citas de instalación de dispositivos de seguridad en vehículos por parte de los asegurados, asesores y analistas. A través de esta aplicación se facilita la solicitud de citas a través de los distintos portales."
+        ]
+      },
+      {
+        "period": "Noviembre 2019 - Agosto 2022",
+        "company": "Seguros Caracas, C. A.",
+        "role": "Desarrollador Web (Junior)",
+        "techStack": ["Java", "JavaScript", "Spring", "PrimeFaces", "JSF", "HTML", "CSS", "PL/SQL"],
+        "achievements": [
+          "Desarrollo de librería de consulta de Google Maps para Oracle Forms. Esta librería permite a la gerencia de Workflow calcular el kilometraje para el servicio de asistencia vial, por ende, la compañía puede aumentar sus ingresos comercializando productos adaptados a las necesidades de los asegurados.",
+          "Adaptación de distintas aplicaciones web para manejar distintas monedas permitiendo a la compañía emitir pólizas en monedas extranjeras."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctame"
+  },
+  "regards": {
+    "message": "Tu tiempo es valioso, ¡gracias por compartirlo!"
+  },
+  "loading": {
+    "message": "Cargando..."
+  },
+  "error": {
+    "title": "¡Ups! Algo salió mal",
+    "message": "Lo sentimos, pero ocurrió algo inesperado. Por favor, intenta refrescar la página.",
+    "button": "Refrescar Página"
+  }
+}

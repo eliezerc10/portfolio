@@ -1,6 +1,8 @@
 import { useState, useEffect, memo } from 'react'
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import { throttle } from '../../utils/throttle';
+import { LanguageToggle } from './LanguageToggle';
 import '../navbar/navbar.css'
 
 interface LinkItem {
@@ -14,7 +16,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
-    
+    const { t } = useTranslation();
     const [scroll, setScroll] = useState(true);
     
     useEffect(() => {
@@ -31,20 +33,27 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
 
     return(
         <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'} aria-label="Main navigation">
-            {links.map((link: LinkItem) =>
-                <Link className='prevent-select' 
-                activeClass="active" 
-                spy={true} 
-                smooth={true} 
-                offset={link.offset} 
-                duration={500}
-                isDynamic={true}
-                key={link.url}  
-                to={link.url}
-                aria-label={`Navigate to ${link.text} section`}
-                role="button"
-                tabIndex={0}>{link.text}</Link>
-            )}
+
+            <div className="navbar-left"></div>
+            <div className="navbar-center">
+                {links.map((link: LinkItem) =>
+                    <Link className='prevent-select' 
+                    activeClass="active" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={link.offset} 
+                    duration={500}
+                    isDynamic={true}
+                    key={link.url}  
+                    to={link.url}
+                    aria-label={`Maps to ${t(`nav.${link.url}`)} section`}
+                    role="button"
+                    tabIndex={0}>{t(`nav.${link.url}`)}</Link>
+                )}
+            </div>
+            <div className="navbar-right">
+                <LanguageToggle />
+            </div>
         </nav>
     );
 });

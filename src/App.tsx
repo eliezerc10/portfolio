@@ -4,7 +4,6 @@ import { links } from './data/links';
 import { contactData } from './data/contactData';
 import { aboutLinks } from './data/aboutLinks';
 import { skills } from './data/skills';
-import { experiences } from './data/experiences';
 import { Suspense, lazy, useMemo } from 'react';
 import { Loading } from './components/loading/Loading';
 import useImagesLoaded from './hooks/useImagesLoaded';
@@ -58,9 +57,9 @@ function App() {
         <main>
           <About aboutLinks={aboutLinks} />
           <Skills skills={skills} />
-          <Experience experiences={experiences} />
+          <Experience />
           <Contact contactData={contactData} aboutLinks={aboutLinks} />
-          <Regards message='Your time is valuable, thank you for sharing it!' />
+          <Regards />
         </main>
       </Suspense>
     </>

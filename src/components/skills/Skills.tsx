@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Pagination,
@@ -22,10 +23,12 @@ interface SkillsProps {
 }
 
 export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
+  const { t } = useTranslation();
+  
   return (
     <Element name="skills">
       <section className="skills-section">
-        <h1>My Skills</h1>
+        <h1>{t('skills.title')}</h1>
           <Swiper
             modules={[Pagination, A11y, Autoplay]}
             spaceBetween={30}

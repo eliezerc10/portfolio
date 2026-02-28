@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../contact/contact.css'
 import { Element } from "react-scroll"
 import { CloudinaryImage } from '../common/CloudinaryImage'
@@ -22,10 +23,12 @@ interface ContactProps {
 }
 
 export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }) => {
+    const { t } = useTranslation();
+    
     return(
-        <Element name="contact-sect">
+        <Element name="contact">
             <section className='contact-section'>
-                <h1 className="contact-me-h1">Contact Me</h1>
+                <h1 className="contact-me-h1">{t('contact.title')}</h1>
                 <div className='contact-list'>
                     
                     {contactData.map((element: ContactItem) =>

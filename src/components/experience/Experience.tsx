@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../experience/experience.css'
 import { Element } from "react-scroll"
 
@@ -11,17 +12,19 @@ interface ExperienceItem {
 }
 
 interface ExperienceProps {
-    experiences: ExperienceItem[];
 }
 
-export const Experience: React.FC<ExperienceProps> = memo(({ experiences }) => {
+export const Experience: React.FC<ExperienceProps> = memo(() => {
+    const { t } = useTranslation();
+    const experiencesData = t('experience.experiences', { returnObjects: true }) as ExperienceItem[];
+    
     return (
         <Element  className='experience-container' name="experience">
             <section className='exp-section'>
-                <h1>Experience</h1>
+                <h1>{t('experience.title')}</h1>
                 <div className='experiences-div'>
-                    { experiences.map((experience: ExperienceItem) =>
-                        <article className='experience-article' key={`${experience.company}-${experience.role}`}>
+                    { experiencesData.map((experience: ExperienceItem, idx: number) =>
+                        <article className='experience-article' key={`exp-${idx}`}>
                             <div>
                                 <div className="circle"></div>
                                 <div className="vertical-line"></div>
