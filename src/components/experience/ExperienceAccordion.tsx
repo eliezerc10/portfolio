@@ -58,7 +58,7 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
   onToggle 
 }) => {
   const { t } = useTranslation();
-  
+
   const handleToggle = useCallback(() => {
     onToggle(index);
   }, [index, onToggle]);
