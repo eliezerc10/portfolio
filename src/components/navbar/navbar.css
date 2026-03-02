@@ -63,14 +63,24 @@
         padding: 16px;
     }
     
+    .navbar-content {
+        width: 100%;
+    }
+
     .navbar-content > a {
         padding: 6px 10px;
-        min-width: 85px;
+        flex: 1;
+        min-width: 0;
     }
     
     .navbar-separator {
         height: 20px;
         margin-right: 16px;
+        flex-shrink: 0;
+    }
+
+    .language-toggle {
+        flex-shrink: 0;
     }
 }
 
