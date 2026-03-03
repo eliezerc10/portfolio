@@ -1,47 +1,51 @@
 .skills-section {
-    margin: 5%;
-    text-align: center;
-    user-select: none;
+  padding: 5%;
+  text-align: center;
+  user-select: none;
 }
 
 .skills-container {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    align-items: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: center;
 }
 .skill-card {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    background-color: #3d3e42;
-    text-align: center;
-    padding: 25px 0 10px;
-    border-radius: 20px;
-    cursor: grab;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3d3e42;
+  text-align: center;
+  padding: 25px 0 10px;
+  border-radius: 20px;
+  cursor: grab;
 
-    img {
-        width: 45%;
-        height: 140px;
-        object-fit: contain;
-    }
+  img {
+    width: 45%;
+    height: 140px;
+    object-fit: contain;
+  }
 }
 
 .swiper-pagination {
-    position: relative !important;
-    margin-top: 30px; 
+  position: relative !important;
+  margin-top: 30px;
 }
 
 .swiper-pagination-bullets {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .skills-container {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+}
 
-@media (min-width:1200px) {
-    .skills-container{
-        grid-template-columns: repeat(4, minmax(200px, 1fr));
-    
-    }
+@media (max-width: 650px) {
+  .skills-section {
+    padding: 16px;
+  }
 }
