@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Element } from "react-scroll";
 import { ExperienceAccordion } from './ExperienceAccordion';
 import { WorkExperienceSummary } from './WorkExperienceSummary';
-import '../experience/experience.css';
+import './experience.css';
 
 interface ExperienceItem {
     period: string;
@@ -15,10 +15,7 @@ interface ExperienceItem {
     achievements: string[];
 }
 
-interface ExperienceProps {
-}
-
-export const Experience: React.FC<ExperienceProps> = memo(() => {
+export const Experience: React.FC = memo(() => {
     const { t } = useTranslation();
     const experiencesData = t('experience.experiences', { returnObjects: true }) as ExperienceItem[];
     const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
@@ -31,6 +28,28 @@ export const Experience: React.FC<ExperienceProps> = memo(() => {
         const navbar = document.querySelector('.navbar-nav');
         return navbar instanceof HTMLElement ? navbar.offsetHeight : 70;
     }, []);
+
+    // Smooth scroll to position the header of a given accordion just below the navbar
+    const scrollToHeader = useCallback((index: number) => {
+        // Use setTimeout to ensure React has rendered the new expanded state
+        setTimeout(() => {
+            const el = accordionRefs.current[index];
+            if (!el) return;
+            const header = el.querySelector('.accordion-header');
+            const scrollTarget = header || el;
+            const navbarHeight = getNavbarHeight();
+            const padding = 42;
+            const targetTop = navbarHeight + padding;
+            const currentTop = scrollTarget.getBoundingClientRect().top;
+            const nudge = currentTop - targetTop;
+            if (Math.abs(nudge) > 5) {
+                window.scrollTo({
+                    top: window.scrollY + nudge,
+                    behavior: 'smooth'
+                });
+            }
+        }, 80);
+    }, [getNavbarHeight]);
 
     // Instantly collapse previous panel and compensate scroll so the clicked accordion stays in place
     const collapseAndCompensateScroll = useCallback((prevIndex: number, clickedIndex: number) => {
@@ -53,53 +72,32 @@ export const Experience: React.FC<ExperienceProps> = memo(() => {
         // Measure clicked accordion position AFTER collapse
         const topAfter = clickedEl.getBoundingClientRect().top;
 
-        // Compensate scroll by exact pixel difference to keep accordion in same visual spot
+        // Compensate scroll by exact pixel difference
         const diff = topAfter - topBefore;
         window.scrollBy(0, diff);
 
         // Re-enable transition for the opening animation
         requestAnimationFrame(() => {
             panel.style.transition = '';
-
-            // After compensation, smooth scroll to position accordion just below navbar
-            const navbarHeight = getNavbarHeight();
-            const padding = 72;
-            const targetTop = navbarHeight + padding;
-            const currentTop = clickedEl.getBoundingClientRect().top;
-            const nudge = currentTop - targetTop;
-            if (Math.abs(nudge) > 5) {
-                window.scrollBy({ top: nudge, behavior: 'smooth' });
-            }
         });
-    }, [getNavbarHeight]);
+    }, []);
 
     const handleToggle = useCallback((index: number) => {
         setExpandedIndex(prevIndex => {
             // Closing the same accordion
             if (prevIndex === index) return null;
 
-            // Switching: collapse previous panel above the clicked one to prevent scroll jump
+            // If a panel above is open, instantly collapse it to prevent scroll jump
             if (prevIndex !== null && prevIndex < index) {
                 collapseAndCompensateScroll(prevIndex, index);
-            } else if (prevIndex !== null) {
-                // Clicking an accordion ABOVE the open one - smooth scroll to it
-                requestAnimationFrame(() => {
-                    const el = accordionRefs.current[index];
-                    if (!el) return;
-                    const rect = el.getBoundingClientRect();
-                    const navbarHeight = getNavbarHeight();
-                    const padding = 16;
-                    const targetTop = navbarHeight + padding;
-                    const diff = rect.top - targetTop;
-                    if (Math.abs(diff) > 10) {
-                        window.scrollBy({ top: diff, behavior: 'smooth' });
-                    }
-                });
             }
+
+            // Always scroll to the header of the newly opened accordion
+            scrollToHeader(index);
 
             return index;
         });
-    }, [collapseAndCompensateScroll, getNavbarHeight]);
+    }, [collapseAndCompensateScroll, scrollToHeader]);
     
     return (
         <Element className='experience-container' name="experience">
