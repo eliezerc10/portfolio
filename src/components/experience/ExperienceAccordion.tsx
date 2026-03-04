@@ -1,4 +1,4 @@
-import { useCallback, memo } from 'react';
+import { useCallback, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './ExperienceAccordion.css';
 
@@ -59,6 +59,11 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
 }) => {
   const { t } = useTranslation();
 
+  const [showAllTech, setShowAllTech] = useState(false);
+
+  const hasExtraTech = experience.techStack.length > 5;
+  const extraTechCount = hasExtraTech ? experience.techStack.length - 5 : 0;
+
   const handleToggle = useCallback(() => {
     onToggle(index);
   }, [index, onToggle]);
@@ -69,6 +74,15 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
       handleToggle();
     }
   }, [handleToggle]);
+
+  const handleMoreTechClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    setShowAllTech(true);
+  }, []);
+
+  const handleMoreTechKeyDown = useCallback((e: React.KeyboardEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+  }, []);
 
   // Calculate tech stack importance based on priority list
   const getTechImportance = (tech: string): 'primary' | 'secondary' | 'tertiary' => {
@@ -124,7 +138,10 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
               </div>
             </div>
             
-            <div className="tech-pills-container">
+            <div
+              id={`experience-tech-group-${index}`}
+              className={`tech-pills-container ${showAllTech ? 'expanded' : ''}`}
+            >
               {experience.techStack.slice(0, 5).map((tech, idx) => (
                 <span 
                   key={`${experience.company}-tech-${idx}`}
@@ -134,9 +151,35 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
                   {tech}
                 </span>
               ))}
-              {experience.techStack.length > 5 && (
-                <span className="tech-pill more">+{experience.techStack.length - 5}</span>
+
+              {hasExtraTech && !showAllTech && (
+                <button
+                  type="button"
+                  className="tech-pill more more-toggle"
+                  onClick={handleMoreTechClick}
+                  onKeyDown={handleMoreTechKeyDown}
+                  aria-expanded={showAllTech}
+                  aria-controls={`experience-tech-group-${index}`}
+                  aria-label={`Show ${extraTechCount} additional technologies`}
+                >
+                  +{extraTechCount}
+                </button>
               )}
+
+              {hasExtraTech && experience.techStack.slice(5).map((tech, extraIdx) => {
+                const globalIdx = extraIdx + 5;
+                return (
+                  <span 
+                    key={`${experience.company}-tech-${globalIdx}`}
+                    className={`tech-pill ${getTechImportance(tech)} extra`}
+                    title={tech}
+                    aria-hidden={!showAllTech}
+                    style={{ transitionDelay: showAllTech ? `${(extraIdx + 1) * 60}ms` : '0ms' }}
+                  >
+                    {tech}
+                  </span>
+                );
+              })}
             </div>
           </div>
           

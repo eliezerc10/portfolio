@@ -159,6 +159,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
 }
 
 .tech-pill {
@@ -170,6 +171,29 @@
   font-weight: 500;
   transition: all 0.2s ease;
   white-space: nowrap;
+}
+
+.tech-pills-container .tech-pill.extra {
+  transition: opacity 0.25s ease, transform 0.25s ease, max-width 0.25s ease, margin 0.25s ease, padding 0.25s ease, border-width 0.25s ease;
+}
+
+.tech-pills-container:not(.expanded) .tech-pill.extra {
+  opacity: 0;
+  transform: translateY(4px);
+  max-width: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  height: 0;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.tech-pills-container.expanded .tech-pill.extra {
+  opacity: 1;
+  transform: translateY(0);
+  max-width: 200px;
 }
 
 .tech-pill.primary {
@@ -305,6 +329,24 @@
   gap: 8px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .tech-pills-container .tech-pill.extra {
+    transition: none;
+  }
+
+  .accordion-panel,
+  .accordion-panel.expanded,
+  .accordion-panel > .panel-content {
+    transition: none;
+  }
+
+  .timeline-dot,
+  .accordion-header,
+  .chevron-icon {
+    transition: none;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .experience-accordion {
@@ -339,7 +381,7 @@
   }
 
   .company-name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .meta-info {
