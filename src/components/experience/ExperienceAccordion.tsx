@@ -211,21 +211,6 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
               ))}
             </ul>
             
-            {experience.techStack.length > 5 && (
-              <div className="full-tech-stack">
-                <h5>{t('experience.accordion.completeTechStack')}</h5>
-                <div className="tech-pills-full">
-                  {experience.techStack.map((tech, idx) => (
-                    <span 
-                      key={`${experience.company}-tech-full-${idx}`}
-                      className={`tech-pill ${getTechImportance(tech)}`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
