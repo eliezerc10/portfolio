@@ -197,29 +197,29 @@
 }
 
 .tech-pill.primary {
-  background: rgba(78, 201, 176, 0.2);
-  color: #8fffd9;
-  border: 1px solid rgba(78, 201, 176, 0.4);
+  background: #3a4f49;
+  color: #d4fff0;
+  border: 1px solid rgba(78, 201, 176, 0.5);
   font-weight: 600;
 }
 
 .tech-pill.secondary {
-  background: rgba(86, 156, 214, 0.2);
-  color: #a3d5ff;
-  border: 1px solid rgba(86, 156, 214, 0.4);
+  background: #3d4757;
+  color: #e0f0ff;
+  border: 1px solid rgba(86, 156, 214, 0.5);
 }
 
 .tech-pill.tertiary {
-  background: rgba(93, 94, 96, 0.25);
-  color: #e0e1e2;
-  border: 1px solid rgba(93, 94, 96, 0.5);
+  background: #3f4042;
+  color: #ffffff;
+  border: 1px solid rgba(93, 94, 96, 0.6);
   font-size: 0.75rem;
 }
 
 .tech-pill.more {
-  background: rgba(240, 191, 108, 0.15);
-  color: #ffe4b3;
-  border: 1px solid rgba(240, 191, 108, 0.4);
+  background: #4a4338;
+  color: #fffaf0;
+  border: 1px solid rgba(240, 191, 108, 0.5);
   font-weight: 600;
 }
 
