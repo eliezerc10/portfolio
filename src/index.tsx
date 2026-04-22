@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
+import { MotionProvider } from './components/common/MotionProvider';
 import './i18n/config';
 import './index.css';
 import App from './App';
@@ -14,7 +15,9 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <HelmetProvider>
-        <App />
+        <MotionProvider>
+          <App />
+        </MotionProvider>
       </HelmetProvider>
     </ErrorBoundary>
   </React.StrictMode>

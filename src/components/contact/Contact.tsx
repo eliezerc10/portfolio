@@ -4,6 +4,7 @@ import '../contact/contact.css'
 import { Element } from "react-scroll"
 import { CloudinaryImage } from '../common/CloudinaryImage'
 import { getCloudinaryPublicId } from '../../config/cloudinaryMapping'
+import { ScrollReveal } from '../common/ScrollReveal'
 
 interface ContactItem {
     icon: string;
@@ -27,7 +28,7 @@ export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }
     
     return(
         <Element name="contact">
-            <section className='contact-section'>
+            <ScrollReveal className='contact-section'>
                 <h1 className="contact-me-h1">{t('contact.title')}</h1>
                 <div className='contact-list'>
                     
@@ -62,7 +63,7 @@ export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }
                         )
                     }
                 </div>
-            </section>
+            </ScrollReveal>
         </Element>
     )
 });

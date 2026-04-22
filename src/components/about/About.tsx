@@ -3,6 +3,7 @@ import { Element, scroller } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 import personalPic from '../../assets/images/profilePic.webp'
 import { CloudinaryImage } from '../common/CloudinaryImage'
+import { ScrollReveal } from '../common/ScrollReveal'
 import { getCloudinaryPublicId } from '../../config/cloudinaryMapping'
 import '../about/about.css'
 
@@ -71,13 +72,13 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
                 </div>
             </section>
             <Element name='about'>
-                <section  className='about-of-sec'>
+                <ScrollReveal className='about-of-sec'>
                     <h1>{t('about.title')}</h1>
                     <div className='about-description'>  
                         <div className='text-line'></div>
                         <p dangerouslySetInnerHTML={{ __html: t('about.description') }} />
                     </div>
-                </section>
+                </ScrollReveal>
             </Element>
         </>
         

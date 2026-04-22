@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Element } from "react-scroll";
 import { ExperienceAccordion } from './ExperienceAccordion';
 import { WorkExperienceSummary } from './WorkExperienceSummary';
+import { ScrollReveal } from '../common/ScrollReveal';
 import './experience.css';
 
 interface ExperienceItem {
@@ -14,6 +15,9 @@ interface ExperienceItem {
     techPriority?: string[];
     achievements: string[];
 }
+
+const getExperienceKey = ({ company, role, period }: Readonly<ExperienceItem>) =>
+    `${company}-${role}-${period}`;
 
 export const Experience: React.FC = memo(() => {
     const { t } = useTranslation();
@@ -101,11 +105,14 @@ export const Experience: React.FC = memo(() => {
     
     return (
         <Element className='experience-container' name="experience">
-            <section className='exp-section'>
+            <ScrollReveal className='exp-section'>
                 <h1>{t('experience.title')}</h1>
                 <div className='experiences-div'>
                     {experiencesData.map((experience: ExperienceItem, idx: number) => (
-                        <div key={`exp-${idx}`} ref={(el) => { accordionRefs.current[idx] = el; }}>
+                        <div
+                            key={getExperienceKey(experience)}
+                            ref={(el) => { accordionRefs.current[idx] = el; }}
+                        >
                             <ExperienceAccordion
                                 experience={experience}
                                 index={idx}
@@ -116,7 +123,7 @@ export const Experience: React.FC = memo(() => {
                     ))}
                     <WorkExperienceSummary />
                 </div>
-            </section>
+            </ScrollReveal>
         </Element>
     )
 });

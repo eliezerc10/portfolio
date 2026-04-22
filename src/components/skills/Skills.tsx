@@ -9,6 +9,7 @@ import {
 } from "swiper/modules";
 import { CloudinaryImage } from "../common/CloudinaryImage";
 import { getCloudinaryPublicId } from "../../config/cloudinaryMapping";
+import { ScrollReveal } from "../common/ScrollReveal";
 import "../skills/skills.css";
 import "swiper/css";
 import "swiper/css/bundle";
@@ -27,7 +28,7 @@ export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
   
   return (
     <Element name="skills">
-      <section className="skills-section">
+      <ScrollReveal className="skills-section">
         <h1>{t('skills.title')}</h1>
           <Swiper
             modules={[Pagination, A11y, Autoplay]}
@@ -57,7 +58,7 @@ export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-      </section>
+      </ScrollReveal>
     </Element>
   );
 });
