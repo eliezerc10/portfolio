@@ -7,6 +7,11 @@
   margin-bottom: -22px;
 }
 
+.contact-me-h1 {
+  font-family: "Besley", serif;
+  font-size: xx-large;
+}
+
 .bottom-links {
     display: flex;
     justify-content: center;

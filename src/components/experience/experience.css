@@ -8,27 +8,32 @@
   padding: 60px 5% 3% 5%;
 }
 
-.exp-section h1 {
+.exp-section h1,
+.exp-section h2 {
   position: absolute;
   top: -28px;
   left: 60px;
   margin: 0;
   color: #f9f9f9;
+  font-family: "Besley", serif;
+  font-size: xx-large;
 }
 
 @media (max-width: 768px) {
   .exp-section {
-    padding: 50px 16px 16px;
+    padding: 50px 4% 5% 4%;
     margin-top: 50px;
   }
-  .exp-section h1 {
+  .exp-section h1,
+  .exp-section h2 {
     left: 16px;
     top: -24px;
   }
 }
 
 @media (max-width: 480px) {
-  .exp-section h1 {
+  .exp-section h1,
+  .exp-section h2 {
     font-size: 1.5rem;
   }
 }

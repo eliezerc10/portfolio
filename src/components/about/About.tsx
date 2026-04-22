@@ -44,7 +44,7 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
     const scrollToContacts = () => {
         scroller.scrollTo('contact', {
             duration: 500,
-            offset:90,
+            offset:50,
             smooth: true
         })
     }

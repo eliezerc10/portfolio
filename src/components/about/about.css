@@ -10,7 +10,13 @@
 }
 
 .about-of-sec {
-  padding: 5% 5% 0 5%;
+  padding: 2% 5% 0 5%;
+}
+
+.about-of-sec > h1,
+.about-of-sec > h2 {
+  font-family: "Besley", serif;
+  font-size: xx-large;
 }
 
 .about-description {
