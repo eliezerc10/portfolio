@@ -21,7 +21,7 @@
 
 .about-description {
   display: flex;
-  line-height: 25px;
+  line-height: 1.65;
   user-select: none;
   strong {
     color: #ffc86b;
@@ -35,6 +35,16 @@
   height: 90vh;
   bottom: 0;
   right: 0;
+}
+
+@media (min-width: 981px) {
+  .about-sec {
+    min-height: 720px;
+  }
+
+  .about-img-motion {
+    height: clamp(520px, 90vh, 860px);
+  }
 }
 
 .about-img {
@@ -214,6 +224,9 @@
 
   .hero-subtitle {
     margin-top: 8px;
+    width: min(65%, 28rem);
+    font-size: clamp(0.84rem, 2.6vh, 0.95rem);
+    line-height: 1.35;
   }
 
   .btn {

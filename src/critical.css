@@ -1,3 +1,8 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* Critical CSS - Above the fold styles */
 body {
   margin: 0;

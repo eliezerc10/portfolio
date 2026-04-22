@@ -1,6 +1,11 @@
 /* Fonts loaded via HTML <link> tags for better performance */
 @import 'material-icons/iconfont/material-icons.css';
 @import './assets/css/scrollbar.css';
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Comfortaa", sans-serif;
