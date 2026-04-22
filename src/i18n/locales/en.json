@@ -7,7 +7,8 @@
   "hero": {
     "greeting": "I'M",
     "name": "Eliezer Castillo",
-    "title": "FULL-STACK DEVELOPER",
+    "title": "FULL-STACK ENGINEER",
+    "subtitle": "Building scalable systems and transactional platforms for real-world products",
     "contactBtn": "Contact me"
   },
   "about": {
