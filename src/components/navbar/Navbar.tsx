@@ -34,20 +34,30 @@ export const Navbar: React.FC<NavbarProps> = memo(({ links }) => {
     return(
         <nav className={scroll ? 'navbar-nav' : 'navbar-nav scroll-navbar'} aria-label="Main navigation">
             <div className="navbar-content">
-                {links.map((link: LinkItem) =>
-                    <Link className='prevent-select' 
-                    activeClass="active" 
-                    spy={true} 
-                    smooth={true} 
-                    offset={link.offset} 
-                    duration={500}
-                    isDynamic={true}
-                    key={link.url}  
-                    to={link.url}
-                    aria-label={`Maps to ${t(`nav.${link.url}`)} section`}
-                    role="button"
-                    tabIndex={0}>{t(`nav.${link.url}`)}</Link>
-                )}
+                {links.map((link: LinkItem) => {
+                    const translationKey = `nav.${link.url}`;
+                    const sectionName = t(translationKey);
+                    const ariaLabel = `Maps to ${sectionName} section`;
+                    
+                    return (
+                        <Link 
+                            className='prevent-select' 
+                            activeClass="active" 
+                            spy={true} 
+                            smooth={true} 
+                            offset={link.offset} 
+                            duration={500}
+                            isDynamic={true}
+                            key={link.url}  
+                            to={link.url}
+                            aria-label={ariaLabel}
+                            role="button"
+                            tabIndex={0}
+                        >
+                            {sectionName}
+                        </Link>
+                    );
+                })}
                 <div className="navbar-separator"></div>
                 <LanguageToggle />
             </div>
