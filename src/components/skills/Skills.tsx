@@ -29,7 +29,7 @@ export const Skills: React.FC<SkillsProps> = memo(({ skills }) => {
   return (
     <Element name="skills">
       <ScrollReveal className="skills-section">
-        <h1>{t('skills.title')}</h1>
+        <h2>{t('skills.title')}</h2>
           <Swiper
             modules={[Pagination, A11y, Autoplay]}
             spaceBetween={30}

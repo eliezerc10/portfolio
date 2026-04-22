@@ -29,7 +29,7 @@ export const Contact: React.FC<ContactProps> = memo(({ contactData, aboutLinks }
     return(
         <Element name="contact">
             <ScrollReveal className='contact-section'>
-                <h1 className="contact-me-h1">{t('contact.title')}</h1>
+                <h2 className="contact-me-h1">{t('contact.title')}</h2>
                 <div className='contact-list'>
                     
                     {contactData.map((element: ContactItem) =>

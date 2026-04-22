@@ -68,13 +68,6 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
     onToggle(index);
   }, [index, onToggle]);
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleToggle();
-    }
-  }, [handleToggle]);
-
   const handleMoreTechClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setShowAllTech(true);
@@ -108,14 +101,18 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
       </div>
       
       <div className="accordion-content">
-        <button
-          className={`accordion-header ${isExpanded ? 'expanded' : ''}`}
-          onClick={handleToggle}
-          onKeyDown={handleKeyDown}
-          aria-expanded={isExpanded}
-          aria-controls={`experience-panel-${index}`}
-          type="button"
-        >
+        <div className="accordion-header-shell">
+          <button
+            id={`experience-header-${index}`}
+            className="accordion-header-trigger"
+            onClick={handleToggle}
+            aria-expanded={isExpanded}
+            aria-controls={`experience-panel-${index}`}
+            aria-label={`${experience.role} at ${experience.company}`}
+            type="button"
+          />
+
+          <div className={`accordion-header ${isExpanded ? 'expanded' : ''}`}>
           <div className="header-main">
             <div className="header-info">
               <h3 className="role-title">{experience.role}</h3>
@@ -192,7 +189,8 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
               className={`chevron-icon ${isExpanded ? 'rotated' : ''}`}
             />
           </div>
-        </button>
+          </div>
+        </div>
 
         <section
           id={`experience-panel-${index}`}

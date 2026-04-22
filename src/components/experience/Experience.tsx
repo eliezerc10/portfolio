@@ -106,7 +106,7 @@ export const Experience: React.FC = memo(() => {
     return (
         <Element className='experience-container' name="experience">
             <ScrollReveal className='exp-section'>
-                <h1>{t('experience.title')}</h1>
+                <h2>{t('experience.title')}</h2>
                 <div className='experiences-div'>
                     {experiencesData.map((experience: ExperienceItem, idx: number) => (
                         <div

@@ -192,6 +192,29 @@
   }
 }
 
+@media (max-width: 1100px) and (orientation: landscape) and (max-height: 500px) {
+  .about-sec {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .description {
+    margin-top: 10%;
+  }
+
+  .main-description {
+    margin-top: 12px;
+  }
+
+  .hero-subtitle {
+    margin-top: 8px;
+  }
+
+  .btn {
+    margin-top: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;

@@ -59,10 +59,9 @@
 /* Accordion header */
 .accordion-header {
   width: 100%;
+  box-sizing: border-box;
   background: transparent;
-  border: none;
   padding: 20px 24px;
-  cursor: pointer;
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -70,13 +69,32 @@
   gap: 16px;
   transition: background-color 0.2s ease;
   color: inherit;
+  position: relative;
 }
 
-.accordion-header:hover {
+.accordion-header-shell {
+  position: relative;
+}
+
+.accordion-header-shell:hover .accordion-header {
   background: rgba(240, 191, 108, 0.03);
 }
 
-.accordion-header:focus-visible {
+.accordion-header-trigger {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+}
+
+.accordion-header-trigger:focus-visible {
   outline: 2px solid #f0bf6c;
   outline-offset: -2px;
 }
@@ -86,6 +104,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .header-info {
@@ -117,6 +138,9 @@
   transition: all 0.2s ease;
   padding: 2px 4px;
   border-radius: 4px;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 .company-link:hover {
@@ -236,6 +260,15 @@
   justify-content: center;
   gap: 4px;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.more-toggle {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 .chevron-icon {

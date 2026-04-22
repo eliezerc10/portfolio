@@ -107,7 +107,7 @@ export const About: React.FC<AboutProps> = memo(({ aboutLinks }) => {
             </section>
             <Element name='about'>
                 <ScrollReveal className='about-of-sec'>
-                    <h1>{t('about.title')}</h1>
+                    <h2>{t('about.title')}</h2>
                     <div className='about-description'>  
                         <div className='text-line'></div>
                         <p dangerouslySetInnerHTML={{ __html: t('about.description') }} />
