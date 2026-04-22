@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "About",
-    "description": "As a <strong>Full Stack Developer</strong> with over <strong>six years of experience</strong>, I specialize in developing, maintaining, and evolving web applications using Java, TypeScript, and JavaScript. I have solid expertise in technologies such as Next.js, React, Angular, Node.js, Express, NestJS, Spring Boot, and SQL. I focus on building scalable, maintainable solutions aligned with architectural best practices, delivering technical and strategic value to every project I participate in."
+    "description": "<strong>Full-Stack Software Engineer</strong> with <strong>6+ years of experience</strong> building scalable web applications. Recent experience in <strong>fintech platforms</strong>, developing transactional systems and payment integrations (Moov) on multi-tenant architectures. Strong background in <strong>Java and TypeScript</strong>, working with modern frameworks in production environments."
   },
   "skills": {
     "title": "Skills"
@@ -42,10 +42,12 @@
         "techStack": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot", "Java", "PostgreSQL", "Tailwind CSS", "MongoDB", "JavaScript"],
         "techPriority": ["Next.js", "TypeScript", "NestJS", "React", "Angular", "Spring Boot"],
         "achievements": [
-          "Development of a multi-tenant financial platform for a leading U.S. company, focused on managing and executing payments to tax preparers. Implemented backend (Java + Spring Boot) deterministic processing of bank reports (XLS/XLSX), strict financial validations, idempotent transaction generation, and tenant isolation, ensuring accounting accuracy and auditability. Additionally, developed integration with an external payment platform enabling secure execution and reconciliation of bank transfers to third parties. On the frontend (Angular), built modules for report visualization, transaction management, and financial dashboards following reactive architecture and best practices.",
-          "Provided technical SEO audit services for a leading U.S. technology company in the AI and voice processing sector. Conducted analysis of web architecture, performance, indexing, Core Web Vitals, and technical structure, implementing direct code-level improvements to optimize crawlability, performance, and semantic structure. As a result, the site's technical health improved by approximately 20%, increasing indexing efficiency and overall organic ranking quality.",
-          "Development of a pre-auction vehicle platform in the United States, where users could explore automotive inventory and place pre-bids. On the frontend (Next.js + TypeScript), implemented a dynamic vehicle catalog with filters, pagination, and optimized detail view for a smooth and scalable experience. On the backend (NestJS), developed APIs for inventory management, efficient queries, and bid handling, ensuring a modular and maintainable architecture. The platform operated integrated with a payment gateway for managing deposits and transactions associated with bids.",
-          "Development of a learning platform for medical trainees from North American universities using modern technologies: Nest.js, Next.js, Tailwind CSS, and TypeORM. The platform is fully responsive, ensuring a consistent user experience across mobile and desktop devices. It includes customized dashboards for each user type (administrators, clinicians, university staff, and students), tailored to their specific needs and workflows."
+          "Implemented a <strong>multi-tenant fintech platform</strong> using <strong>Java, Spring Boot, Angular, PostgreSQL, and AWS</strong>, supporting dozens of companies in the U.S.",
+          "Developed <strong>idempotent transaction processing</strong> and integrated <strong>Moov</strong> for secure payment execution and reconciliation.",
+          "Optimized an enterprise <strong>Voice AI platform</strong> (+1500 pages, Sanity CMS), improving <strong>SEO health by ~20%</strong>.",
+          "Built a <strong>pre-auction platform</strong> (Next.js, NestJS) integrated with a Copart-like ecosystem for scalable inventory exploration and bidding.",
+          "Developed <strong>role-based dashboards</strong> in a multi-user educational platform.",
+          "Maintained a <strong>production mobile app (React Native)</strong> for tool rental operations in the U.S., ensuring stability and resolving critical issues."
         ]
       },
       {
@@ -56,10 +58,9 @@
         "techStack": ["Angular", "Java", "TypeScript", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
         "techPriority": ["Angular", "Java", "TypeScript", "Spring"],
         "achievements": [
-          "Development of a web application with Angular and REST service with Java to issue RCV policies from any device in simple steps. This application is very significant for the business as it increases reach and facilitates the acquisition of new customers.",
-          "Development of a web application with Angular and REST service with Java to dynamically quote company products, allowing access to information on different rates by potential customers, policyholders, and advisors.",
-          "Development of REST web service to issue RCV, home, and personal accident policies through insurance advisor portals and/or companies. This service enables integration with other companies, representing the generation of new business opportunities.",
-          "Development of a web application for managing installation appointments for vehicle security devices by policyholders, advisors, and analysts. Through this application, appointment requests are facilitated through different portals."
+          "Built <strong>digital insurance issuance systems (Angular + Java)</strong>, enabling large-scale distribution through commercial partnerships.",
+          "Developed <strong>REST APIs (Spring Boot)</strong> for <strong>B2B integrations</strong>, onboarding high-volume clients and opening new business channels.",
+          "Built a <strong>real-time quoting and appointment management system</strong> (Java, JSF, PL/SQL), reducing friction in commercial processes."
         ]
       },
       {
@@ -70,8 +71,9 @@
         "techStack": ["Java", "Spring", "JavaScript", "PrimeFaces", "JSF", "PL/SQL", "HTML", "CSS"],
         "techPriority": ["Java", "Spring", "JavaScript", "PrimeFaces"],
         "achievements": [
-          "Development of Google Maps query library for Oracle Forms. This library allows Workflow management to calculate mileage for roadside assistance service, therefore, the company can increase its income by marketing products adapted to policyholders' needs.",
-          "Adaptation of different web applications to handle multiple currencies, allowing the company to issue policies in foreign currencies."
+          "Built <strong>digital insurance issuance systems (Angular + Java)</strong>, enabling large-scale distribution through commercial partnerships.",
+          "Developed <strong>REST APIs (Spring Boot)</strong> for <strong>B2B integrations</strong>, onboarding high-volume clients and opening new business channels.",
+          "Built a <strong>real-time quoting and appointment management system</strong> (Java, JSF, PL/SQL), reducing friction in commercial processes."
         ]
       }
     ]

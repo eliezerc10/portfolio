@@ -194,10 +194,9 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
           </div>
         </button>
 
-        <div
+        <section
           id={`experience-panel-${index}`}
           className={`accordion-panel ${isExpanded ? 'expanded' : ''}`}
-          role="region"
           aria-labelledby={`experience-header-${index}`}
         >
           <div className="panel-content">
@@ -206,13 +205,13 @@ export const ExperienceAccordion: React.FC<ExperienceAccordionProps> = memo(({
               {experience.achievements.map((achievement, achIdx) => (
                 <li key={`${experience.company}-achievement-${achIdx}`}>
                   <span className="achievement-bullet">▸</span>
-                  {achievement}
+                  <span dangerouslySetInnerHTML={{ __html: achievement }} />
                 </li>
               ))}
             </ul>
             
           </div>
-        </div>
+        </section>
       </div>
     </article>
   );
