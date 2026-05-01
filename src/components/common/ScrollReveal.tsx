@@ -28,8 +28,8 @@ export function ScrollReveal({
   children,
   className,
   delay = 0,
-  distance = 24,
-  duration = 0.45,
+  distance = 40,
+  duration = 0.7,
   viewport = revealViewport,
   ...rest
 }: Readonly<ScrollRevealProps>) {

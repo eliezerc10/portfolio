@@ -7,7 +7,7 @@
     padding: 16px 24px;
     background-color: #34353a;
     z-index: 1000;
-    transition: background-color .25s;
+    transition: background-color 0.3s ease;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@
     padding: 8px 16px;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
     min-width: 100px;
     text-align: center;

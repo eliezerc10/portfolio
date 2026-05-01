@@ -42,7 +42,7 @@ export const Experience: React.FC = memo(() => {
             const header = el.querySelector('.accordion-header');
             const scrollTarget = header || el;
             const navbarHeight = getNavbarHeight();
-            const padding = 42;
+            const padding = 62;
             const targetTop = navbarHeight + padding;
             const currentTop = scrollTarget.getBoundingClientRect().top;
             const nudge = currentTop - targetTop;
@@ -64,21 +64,25 @@ export const Experience: React.FC = memo(() => {
         const panel = prevEl.querySelector('.accordion-panel.expanded');
         if (!panel || !(panel instanceof HTMLElement)) return;
 
-        // Measure clicked accordion position BEFORE collapse
+        // Batch DOM reads before writes to minimize reflows
         const topBefore = clickedEl.getBoundingClientRect().top;
 
-        // Instantly collapse: disable transition, remove expanded class, force reflow
+        // Instantly collapse: disable transition, remove expanded class
         panel.style.transition = 'none';
         panel.classList.remove('expanded');
+        
+        // Force style recalc before measuring new position
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        panel.offsetHeight; // Force reflow
+        panel.offsetHeight;
 
         // Measure clicked accordion position AFTER collapse
         const topAfter = clickedEl.getBoundingClientRect().top;
 
         // Compensate scroll by exact pixel difference
         const diff = topAfter - topBefore;
-        window.scrollBy(0, diff);
+        if (diff !== 0) {
+            window.scrollBy(0, diff);
+        }
 
         // Re-enable transition for the opening animation
         requestAnimationFrame(() => {
